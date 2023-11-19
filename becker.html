@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Howard Becker - Sociologue</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">SocioloGenius</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/auteurs.html">Auteurs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/fiche">Fiches</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/notion.html">Notions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <div class="row">
+        <div class="col">
+          <h1>Howard Becker</h1>
+          <h2>Un sociologue influent de la théorie de l'étiquetage</h2>
+        </div>
+      </div>
+
+      <!-- Biography section -->
+      <div class="row mt-5">
+        <div class="col-lg-4">
+          <img
+            class="img-fluid"
+            src="{{ url_for('static', filename='becker.jpg') }}"
+            alt="Howard Becker"
+          />
+        </div>
+        <div class="col-lg-8">
+          <h3>Biographie</h3>
+          <p>
+            Howard Becker, né en 1928, est un sociologue américain renommé, surtout connu pour son travail dans la théorie de l'étiquetage et ses études sur la culture, les arts et l'éducation. Son approche sociologique, centrée sur la manière dont les individus interagissent et créent des significations au sein de groupes sociaux, a influencé de manière significative la compréhension moderne des phénomènes sociaux.
+          </p>
+        </div>
+      </div>
+
+      <!-- Contributions section -->
+      <div class="row mt-5">
+        <div class="col">
+          <h3>Contributions majeures</h3>
+          <ul>
+            <li>
+              <strong>Théorie de l'étiquetage</strong> : Analyse de la manière dont les individus sont classés et stigmatisés en tant que déviants par la société, affectant leur identité et leur comportement.
+            </li>
+            <li>
+              <strong>Outsiders (1963)</strong> : Exploration des interactions entre les individus dits 'déviants' et la société.
+            </li>
+            <li>
+              <strong>Art Worlds (1982)</strong> : Examen de la nature collective de la création artistique et de la production culturelle.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Resources section -->
+      <div class="row mt-5">
+        <div class="col">
+          <h3>Ressources supplémentaires</h3>
+          <p>
+            Pour explorer davantage les idées et écrits de Howard Becker :
+          </p>
+          <ul>
+            <li>
+              <a href="https://www.howardbecker.com/">Site Web officiel de Howard Becker</a>
+            </li>
+            <li>
+              <a href="https://www.jstor.org/action/doBasicSearch?Query=howard+becker">Articles académiques sur JSTOR</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Inclusion d'un média, comme une vidéo YouTube -->
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/[lien_de_la_vidéo]"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <p>&copy; 2023 SocioloGenius. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Scripts Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

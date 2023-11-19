@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Auguste Comte - Père de la Sociologie</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">SocioloGenius</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/auteurs.html">Auteurs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/fiche">Fiches</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/notion.html">Notions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <div class="row">
+        <div class="col">
+          <h1>Auguste Comte</h1>
+          <h2>Le fondateur du positivisme et de la sociologie</h2>
+        </div>
+      </div>
+
+      <!-- Biography section -->
+      <div class="row mt-5">
+        <div class="col-lg-4">
+          <img
+            class="img-fluid"
+            src="{{ url_for('static', filename='comte.jpg') }}"
+            alt="Auguste Comte"
+          />
+        </div>
+        <div class="col-lg-8">
+          <h3>Biographie</h3>
+          <p>
+            Auguste Comte (1798-1857), philosophe français, est reconnu comme le père de la sociologie et l'un des premiers à aborder l'étude de la société avec une approche scientifique. Il est le créateur du positivisme, une méthode de connaissance basée sur l'observation et l'expérimentation. Sa vision a profondément influencé le développement des sciences sociales.
+          </p>
+        </div>
+      </div>
+
+      <!-- Contributions section -->
+      <div class="row mt-5">
+        <div class="col">
+          <h3>Contributions majeures</h3>
+          <ul>
+            <li>
+              <strong>Le Positivisme</strong> : Une philosophie qui affirme que la seule connaissance authentique est celle obtenue par l'expérience scientifique.
+            </li>
+            <li>
+              <strong>La loi des trois états</strong> : Théorie selon laquelle la société humaine évolue à travers trois phases - théologique, métaphysique et scientifique.
+            </li>
+            <li>
+              <strong>L'ordre et le progrès</strong> : Concept mettant en avant l'importance de l'ordre social et du progrès scientifique.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Resources section -->
+      <div class="row mt-5">
+        <div class="col">
+          <h3>Ressources supplémentaires</h3>
+          <p>
+            Pour approfondir vos connaissances sur Auguste Comte et le positivisme :
+          </p>
+          <ul>
+            <li>
+              <a href="https://www.augustecomte.org/">Société Auguste Comte</a>
+            </li>
+            <li>
+              <a href="https://www.jstor.org/action/doBasicSearch?Query=auguste+comte">Articles académiques sur JSTOR</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Inclusion d'un média, comme une vidéo YouTube -->
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/[lien_de_la_vidéo]"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <p>&copy; 2023 SocioloGenius. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Scripts Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

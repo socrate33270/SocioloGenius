@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Max Weber - Sociologue</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">SocioloGenius</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Accueil</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/fiche.html">Fiches<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/notions.html">Notions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <h1 class="text-center mb-4">Max Weber</h1>
+
+      <!-- Biography section -->
+      <section id="biography">
+        <h2>Biographie</h2>
+        <p>
+          Max Weber (1864-1920) était un sociologue, économiste et juriste allemand. Il est considéré comme l'un des fondateurs de la sociologie moderne. Son travail a profondément influencé la théorie sociologique et la méthodologie de recherche sociale.
+        </p>
+      </section>
+
+      <!-- Socio-Historical Context -->
+      <section id="context">
+        <h2>Contexte Socio-Historique</h2>
+        <p>
+          Weber a vécu à une époque de profonds bouleversements en Europe. Son époque a été marquée par l'industrialisation rapide, la montée du capitalisme, et les transformations politiques et sociales. Ces changements ont influencé ses réflexions sur la nature de la société et l'autorité.
+        </p>
+      </section>
+
+      <!-- School of Thought -->
+      <section id="thought">
+        <h2>Courant de Pensée</h2>
+        <p>
+          Bien que Weber soit souvent associé au <strong>fonctionnalisme</strong>, il est mieux connu pour son approche compréhensive de la sociologie, qui met l'accent sur la compréhension des actions sociales à travers le prisme des significations subjectives que les individus attribuent à leurs actions.
+        </p>
+      </section>
+
+      <!-- Key Concepts -->
+      <section id="concepts">
+        <h2>Concepts Clés</h2>
+        <ul>
+          <li>
+            <strong>Types idéaux</strong>: Un outil méthodologique utilisé par Weber pour analyser les phénomènes sociaux. Les types idéaux sont des modèles simplifiés et exagérés qui aident à comprendre le monde social en mettant en évidence ses aspects les plus significatifs.
+          </li>
+          <li>
+            <strong>L'Éthique protestante et l'esprit du capitalisme</strong>: Dans cet ouvrage, Weber explore comment les valeurs religieuses du protestantisme ont contribué au développement du capitalisme moderne en Europe.
+          </li>
+          <li>
+            <strong>Domination</strong>: Weber distingue trois types de domination légitime : traditionnelle, charismatique et légale-rationnelle. Chaque type décrit une manière dont l'autorité est exercée et justifiée dans les sociétés.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <p>&copy; 2023 SocioloGenius. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Scripts Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

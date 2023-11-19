@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Auteurs - Auteurs</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Include your navigation bar here -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">SocioloGenius</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/auteurs.html">Auteurs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/fiche.html">Fiches</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/notion.html">Notions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Section Auteurs -->
+    <section id="auteurs" class="container mt-5">
+      <h2>Auteurs</h2>
+      <ul>
+        <li><a href="/emile.html">Émile Durkheim</a></li>
+        <li><a href="/weber.html">Max Weber</a></li>
+        <li><a href="/marx.html">Karl Marx</a></li>
+        <li><a href="/becker.html">Howard Becker</a></li>
+        <li><a href="/comte.html">Auguste Comte Marx</a></li>
+        <li><a href="/tocqueville.html">Alexi De Tockeville</a></li>
+        <li><a href="/foucault.html">Michel Foucault</a></li>
+        <li><a href="/strauss.html">Levi-Strauss</a></li>
+        <li><a href="/goffman.html">Erving Goffman</a></li>
+        <li><a href="/garfinkel.html">Harold Garfinkel</a></li>
+        <li><a href="/parsons.html">Talcott Parsons</a></li>
+        <li><a href="/bourdieu.html">Pierre Bourdieu</a></li>
+      </ul>
+    </section>
+
+    <!-- Reste de votre contenu... -->
+  </body>
+</html>

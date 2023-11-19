@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Michel Foucault - Philosophe et Sociologue</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">SocioloGenius</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/auteurs.html">Auteurs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/fiche">Fiches</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/notion.html">Notions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <div class="row">
+        <div class="col">
+          <h1>Michel Foucault</h1>
+          <h2>Un penseur clé de la modernité</h2>
+        </div>
+      </div>
+
+      <!-- Biography section -->
+      <div class="row mt-5">
+        <div class="col-lg-4">
+          <img
+            class="img-fluid"
+            src="{{ url_for('static', filename='foucault.jpg') }}"
+            alt="Michel Foucault"
+          />
+        </div>
+        <div class="col-lg-8">
+          <h3>Biographie</h3>
+          <p>
+            Michel Foucault (1926-1984) était un philosophe et sociologue français dont les travaux ont eu une influence profonde dans les domaines de la théorie sociale, de la critique culturelle et de la philosophie. Ses théories sur le pouvoir, la connaissance, et les relations entre eux ont changé la manière dont la société et la culture sont étudiées.
+          </p>
+        </div>
+      </div>
+
+      <!-- Contributions section -->
+      <div class="row mt-5">
+        <div class="col">
+          <h3>Contributions majeures</h3>
+          <ul>
+            <li>
+              <strong>La théorie du pouvoir-discours</strong> : Exploration de la relation entre le pouvoir, la connaissance et le discours et comment ils sont utilisés pour contrôler et définir la société.
+            </li>
+            <li>
+              <strong>Surveiller et punir (1975)</strong> : Analyse de l'évolution historique du système pénal et introduction du concept de "panoptisme".
+            </li>
+            <li>
+              <strong>Histoire de la sexualité</strong> : Une étude sur la manière dont la sexualité est réglementée par la société et liée au pouvoir.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Resources section -->
+      <div class="row mt-5">
+        <div class="col">
+          <h3>Ressources supplémentaires</h3>
+          <p>
+            Pour une exploration plus approfondie des travaux de Michel Foucault :
+          </p>
+          <ul>
+            <li>
+              <a href="https://www.foucault.info/">Foucault.info</a>
+            </li>
+            <li>
+              <a href="https://www.jstor.org/action/doBasicSearch?Query=michel+foucault">Articles académiques sur JSTOR</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Inclusion d'un média, comme une vidéo YouTube -->
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/[lien_de_la_vidéo]"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <p>&copy; 2023 SocioloGenius. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Scripts Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

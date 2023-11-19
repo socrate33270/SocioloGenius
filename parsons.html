@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Talcott Parsons - Sociologue</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">SocioloGenius</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/auteurs.html">Auteurs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/fiche">Fiches</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/notion.html">Notions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <div class="row">
+        <div class="col">
+          <h1>Talcott Parsons</h1>
+          <h2>Théoricien clé de la théorie sociologique fonctionnaliste</h2>
+        </div>
+      </div>
+
+      <!-- Biography section -->
+      <div class="row mt-5">
+        <div class="col-lg-4">
+          <img
+            class="img-fluid"
+            src="{{ url_for('static', filename='parsons.jpg') }}"
+            alt="Talcott Parsons"
+          />
+        </div>
+        <div class="col-lg-8">
+          <h3>Biographie</h3>
+          <p>
+            Talcott Parsons (1902-1979) était un sociologue américain influent, connu pour sa théorie de l'action sociale et son rôle dans le développement de la théorie sociologique fonctionnaliste. Ses travaux ont eu un impact considérable sur la sociologie, en mettant l'accent sur la manière dont les institutions sociales répondent à des besoins sociaux.
+          </p>
+        </div>
+      </div>
+
+      <!-- Contributions section -->
+      <div class="row mt-5">
+        <div class="col">
+          <h3>Contributions majeures</h3>
+          <ul>
+            <li>
+              <strong>Théorie de l'action sociale</strong> : Analyse du comportement social en termes de processus de prise de décision et de choix.
+            </li>
+            <li>
+              <strong>Théorie fonctionnaliste</strong> : Vue des sociétés comme des systèmes complexes dont les parties travaillent ensemble pour promouvoir la solidarité et la stabilité.
+            </li>
+            <li>
+              <strong>Système AGIL</strong> : Modèle identifiant les quatre fonctions principales que tout système social doit accomplir pour survivre : adaptation, réalisation des objectifs, intégration et maintien des modèles latents.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Resources section -->
+      <div class="row mt-5">
+        <div class="col">
+          <h3>Ressources supplémentaires</h3>
+          <p>
+            Pour explorer davantage les idées et écrits de Talcott Parsons :
+          </p>
+          <ul>
+            <li>
+              <a href="https://www.jstor.org/action/doBasicSearch?Query=talcott+parsons">Articles académiques sur JSTOR</a>
+            </li>
+            <li>
+              <a href="https://www.biography.com/scholar/talcott-parsons">Biographie de Talcott Parsons</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Inclusion d'un média, comme une vidéo YouTube -->
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/[lien_de_la_vidéo]"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <p>&copy; 2023 SocioloGenius. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Scripts Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

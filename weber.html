@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Max Weber - Sociologue</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">SocioloGenius</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/auteurs.html">Auteurs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/fiche">Fiches</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/notion.html">Notions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <div class="row">
+        <div class="col">
+          <h1>Max Weber</h1>
+          <h2>Un architecte de la sociologie moderne</h2>
+        </div>
+      </div>
+
+      <!-- Biography section -->
+      <div class="row mt-5">
+        <div class="col-lg-4">
+          <img
+            class="img-fluid"
+            src="{{ url_for('static', filename='weber.jpg') }}"
+            alt="Max Weber"
+          />
+        </div>
+        <div class="col-lg-8">
+          <h3>Biographie</h3>
+          <p>
+            Max Weber (1864-1920), un sociologue, économiste et juriste allemand, est reconnu pour son influence profonde sur les sciences sociales modernes. Sa compréhension des relations entre société, économie et politique a jeté les bases de la sociologie comme discipline universitaire. Ses théories sur la rationalisation, la bureaucratie, et le processus de "désenchantement" du monde restent des pierres angulaires de la sociologie contemporaine.
+          </p>
+        </div>
+      </div>
+
+      <!-- Contributions section -->
+      <div class="row mt-5">
+        <div class="col">
+          <h3>Contributions majeures</h3>
+          <ul>
+            <li>
+              <strong>L'Éthique protestante et l'esprit du capitalisme (1905)</strong> : Analyse de l'impact du protestantisme sur le développement du capitalisme moderne.
+            </li>
+            <li>
+              <strong>Économie et Société (1922)</strong> : Un ouvrage posthume définissant ses concepts de sociologie, y compris les types de domination.
+            </li>
+            <li>
+              <strong>La Politique en tant que vocation (1919)</strong> : Discussion de la nature du pouvoir politique et de l'autorité.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Resources section -->
+      <div class="row mt-5">
+        <div class="col">
+          <h3>Ressources supplémentaires</h3>
+          <p>
+            Pour une exploration plus approfondie des travaux de Max Weber, consultez les ressources suivantes :
+          </p>
+          <ul>
+            <li>
+              <a href="https://www.maxweber.fr/">Société Max Weber</a>
+            </li>
+            <li>
+              <a href="https://www.jstor.org/action/doBasicSearch?Query=max+weber">Articles académiques sur JSTOR</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Inclusion d'un média, comme une vidéo YouTube -->
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/[lien_de_la_vidéo]"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <p>&copy; 2023 SocioloGenius. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Scripts Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction à la Sociologie</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">SocioloGenius</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/auteurs.html">Auteurs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/notion.html">Notions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container my-5">
+      <h1 class="text-center mb-4">Introduction à la Sociologie</h1>
+
+      <!-- Introduction section -->
+      <section id="introduction">
+        <h2>Qu'est-ce que la Sociologie ?</h2>
+        <p>
+          La sociologie est l'étude des sociétés, de leurs structures, de leurs évolutions, et des interactions humaines au sein de ces structures. Elle cherche à comprendre comment les sociétés fonctionnent et comment les individus y interagissent.
+        </p>
+      </section>
+
+      <!-- Historical Context -->
+      <section id="history">
+        <h2>Histoire et Naissance de la Sociologie</h2>
+        <p>
+          La sociologie est née au XIXe siècle, une époque marquée par d'importants changements sociaux et économiques, dont la Révolution industrielle et les bouleversements politiques en Europe. Les premiers sociologues, comme Auguste Comte et Émile Durkheim, cherchaient à appliquer des méthodes scientifiques pour comprendre ces changements rapides et leurs impacts sur les sociétés.
+        </p>
+      </section>
+
+      <!-- Key Concepts -->
+      <section id="concepts">
+        <h2>Concepts Fondamentaux</h2>
+        <ul>
+          <li>
+            <strong>Structure sociale</strong>: Réfère à la manière dont une société est organisée en termes de relations entre différents groupes et institutions.
+          </li>
+          <li>
+            <strong>Rôle social</strong>: Décrit les comportements et attentes associés à une position particulière dans la société.
+          </li>
+          <li>
+            <strong>Culture</strong>: Englobe les croyances, les pratiques, les arts, les outils, et les normes d'une société.
+          </li>
+          <li>
+            <strong>Changement social</strong>: Examine comment et pourquoi les sociétés changent au fil du temps.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <p>&copy; 2023 SocioloGenius. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Scripts Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
