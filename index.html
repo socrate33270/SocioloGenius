@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>SocioloGenius</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Rejoignez SocioloGenius pour un voyage enrichissant dans le monde de la sociologie. Accédez à des fiches de lecture gratuites, explorez des notions clés et découvrez des auteurs influents. Parfait pour étudiants et passionnés de sociologie.">
-    <meta name="keywords" content="SocioloGenius, sociologie, fiches de lecture, auteurs sociologiques, concepts sociologiques, études sociologiques, apprentissage sociologie">
-    <meta property="og:title" content="SocioloGenius: Votre Plateforme de Sociologie" />
-    <meta property="og:description" content="Explorez la sociologie avec des fiches de lecture gratuites, des notions clés et des auteurs influents sur SocioloGenius." />
-    <meta property="og:image" content="URL_de_l_image_representative_du_site" />
-    <meta property="og:url" content="https://sociologenius.com" />
-    <meta property="og:type" content="website" />
-    <link rel="canonical" href="https://sociologenius.com" />
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}" />
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+  </head>
+  <body>
     <!-- Start of the navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="/">SocioloGenius</a>
@@ -37,7 +37,7 @@
             <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="auteurs.html">Auteurs</a>
+            <a class="nav-link" href="/auteurs.html">Auteurs</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/fiche.html">Fiches</a>
@@ -46,7 +46,9 @@
             <a class="nav-link" href="/notion.html">Notions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/contact">Contact</a>
+            <a class="nav-link" href="/contact.html">Contact</a>
+            <li class="nav-item">
+            <a class="nav-link" href="/quiz.html">Quiz</a>
           </li>
         </ul>
       </div>
@@ -62,7 +64,7 @@
         <div class="container">
           <h1 class="display-4">Bienvenue sur SocioloGenius</h1>
           <p class="lead">Votre plateforme gratuite de sociologie</p>
-          <a href="/fiche.html" class="btn btn-primary btn-lg"
+          <a href="/auteurs.html" class="btn btn-primary btn-lg"
             >Découvrir les cours</a
           >
         </div>
