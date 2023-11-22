@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Max Weber - Sociologue</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for('static', filename='styles.css') }}"
-    />
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <meta name="description" content="Découvrez l'œuvre de Max Weber sur SocioloGenius. Approfondissez vos connaissances sur ses théories sociologiques et leur impact sur la compréhension moderne de la société et de la politique.">
-
+    <title>Max Weber - Sociologie et Théorie | SocioloGenius</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explorez les contributions de Max Weber à la sociologie, y compris ses théories sur la rationalisation, l'éthique protestante, et l'autorité. Un guide complet pour comprendre ses idées influentes.">
+    <meta name="keywords" content="Max Weber, sociologie, rationalisation, éthique protestante, autorité, théorie sociologique, bureaucratie, cours de sociologie">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Ajoutez d'autres balises méta au besoin -->
   </head>
   <body>
-    <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Include your navigation bar here -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="/">SocioloGenius</a>
       <button
         class="navbar-toggler"
@@ -54,26 +50,69 @@
       <div class="row">
         <div class="col">
           <h1>Max Weber</h1>
-          <h2>Un architecte de la sociologie moderne</h2>
+          <h2>Un pilier de la sociologie moderne</h2>
         </div>
       </div>
 
-      <!-- Biography section -->
       <div class="row mt-5">
-        <div class="col-lg-4">
-          <img
-            class="img-fluid"
-            src="{{ url_for('static', filename='weber.jpg') }}"
-            alt="Max Weber"
-          />
+        <!-- Citation -->
+        <div class="col-lg-6">
+          <div class="quote-card">
+            <p class="quote-text">"La sociologie doit être une science rigoureuse des actions sociales."</p>
+            <p class="quote-author">— Max Weber</p>
+          </div>
         </div>
-        <div class="col-lg-8">
+
+        <!-- Image -->
+        <div class="col-lg-6">
+          <img class="img-fluid" src="{{ url_for('static', filename='weber.jpg') }}" alt="Max Weber" />
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <!-- Biographie -->
+        <div class="col-lg-12">
           <h3>Biographie</h3>
           <p>
-            Max Weber (1864-1920), un sociologue, économiste et juriste allemand, est reconnu pour son influence profonde sur les sciences sociales modernes. Sa compréhension des relations entre société, économie et politique a jeté les bases de la sociologie comme discipline universitaire. Ses théories sur la rationalisation, la bureaucratie, et le processus de "désenchantement" du monde restent des pierres angulaires de la sociologie contemporaine.
+            Max Weber (1864-1920), un sociologue, économiste, et juriste allemand, est reconnu pour ses analyses sur la structure de la société. Ses idées sur la rationalisation, l'éthique protestante, et les formes d'autorité ont profondément influencé la sociologie moderne.
           </p>
         </div>
       </div>
+      
+         
+      <div class="row mt-5">
+  <div class="col">
+    <h3>Contexte Socio-historique</h3>
+    <p>
+      Max Weber a vécu dans une période de profondes transformations en Allemagne et en Europe. La fin du 19ème siècle et le début du 20ème siècle ont été marqués par l'industrialisation rapide, l'urbanisation, et les changements politiques majeurs, y compris l'unification allemande sous Bismarck. Ces changements ont créé un terrain fertile pour les réflexions de Weber sur la rationalisation, la bureaucratisation, et les structures de pouvoir.
+    </p>
+    <p>
+      L'émergence du capitalisme moderne, les tensions entre les classes sociales, et les conflits politiques de l'époque ont également influencé Weber. Il a été témoin de la montée de la bureaucratie et de l'État moderne, des développements qui ont façonné sa compréhension de la domination légale-rationnelle et de l'autorité. De plus, la sécularisation croissante de la société et les débats intellectuels sur la religion ont nourri ses analyses sur l'éthique protestante et l'esprit du capitalisme.
+    </p>
+    <p>
+      En somme, le contexte socio-historique de Weber a joué un rôle crucial dans le développement de ses théories sur la société, l'économie, et la politique, faisant de lui un observateur aigu des dynamiques complexes de la modernité.
+    </p>
+  </div>
+</div>
+
+      <div class="row mt-5">
+        <div class="col">
+          <h3>Concepts Majeurs</h3>
+          <ul>
+            <li>
+              <strong>Rationalisation</strong>: Weber a exploré comment la modernité est caractérisée par une tendance croissante vers la rationalisation des aspects sociaux et économiques de la vie.
+            </li>
+            <li>
+              <strong>Éthique protestante et l'esprit du capitalisme</strong>: Analyse de la relation entre les croyances religieuses et le développement du capitalisme moderne.
+            </li>
+            <li>
+              <strong>Types d'autorité</strong>: Weber a distingué trois types d'autorité - traditionnelle, charismatique, et légale-rationnelle - et a examiné leur impact sur la structure sociale et politique.
+            </li>
+          </ul>
+        </div>
+      </div>
+   
+
 
       <!-- Contributions section -->
       <div class="row mt-5">
@@ -81,13 +120,12 @@
           <h3>Contributions majeures</h3>
           <ul>
             <li>
-              <strong>L'Éthique protestante et l'esprit du capitalisme (1905)</strong> : Analyse de l'impact du protestantisme sur le développement du capitalisme moderne.
+              <strong>Économie et Société (1922)</strong>:
+              Un ouvrage majeur où Weber développe ses théories sur la sociologie des religions, les formes d'autorité, et la structure sociale.
             </li>
             <li>
-              <strong>Économie et Société (1922)</strong> : Un ouvrage posthume définissant ses concepts de sociologie, y compris les types de domination.
-            </li>
-            <li>
-              <strong>La Politique en tant que vocation (1919)</strong> : Discussion de la nature du pouvoir politique et de l'autorité.
+              <strong>L'Éthique protestante et l'Esprit du capitalisme (1905)</strong>:
+              Analyse de l'influence des croyances religieuses sur le développement économique et l'éthique du travail.
             </li>
           </ul>
         </div>
@@ -98,24 +136,24 @@
         <div class="col">
           <h3>Ressources supplémentaires</h3>
           <p>
-            Pour une exploration plus approfondie des travaux de Max Weber, consultez les ressources suivantes :
+            Pour approfondir vos connaissances sur Max Weber, voici quelques ressources que nous recommandons :
           </p>
           <ul>
             <li>
-              <a href="https://www.maxweber.fr/">Société Max Weber</a>
+              <a href="https://www.weber-sociologie.fr/">Association des Amis de Max Weber</a>
             </li>
             <li>
-              <a href="https://www.jstor.org/action/doBasicSearch?Query=max+weber">Articles académiques sur JSTOR</a>
+              <a href="https://www.jstor.org/journal/maxweberstudies">Max Weber Studies</a>
             </li>
           </ul>
         </div>
       </div>
 
-      <!-- Inclusion d'un média, comme une vidéo YouTube -->
+      <!-- Video Embed -->
       <iframe
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/[lien_de_la_vidéo]"
+        src="https://www.youtube.com/embed/XYZ123456" <!-- Replace with actual video link -->
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -123,11 +161,11 @@
       ></iframe>
     </main>
 
+    <!-- Include your footer here -->
     <footer class="bg-dark text-white text-center py-4 mt-5">
       <p>&copy; 2023 SocioloGenius. Tous droits réservés.</p>
     </footer>
 
-    <!-- Scripts Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
