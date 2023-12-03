@@ -1,20 +1,77 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Max Weber - Sociologue</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for('static', filename='styles.css') }}"
-    />
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explorez la vie et les théories de Max Weber, figure clé de la sociologie. Découvrez ses contributions à la compréhension de la société moderne.">
+    <meta name="keywords" content="Max Weber, Sociologie, Théories Sociologiques, Éthique Protestante, Rationalisation">
+    <title>Fiche de Révision - Max Weber</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Styles -->
+    <style>
+        /* Vos styles CSS */
+          <style>
+        .fiche {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .fiche h1, .fiche h2 {
+            color: #2e5266;
+        }
+
+        .fiche h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .fiche h2 {
+            border-bottom: 2px solid #6c757d;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        .fiche p, .fiche li {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .fiche ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        .fiche ul li {
+            font-weight: bold;
+        }
+
+        .fiche .biographie p, .fiche .citations ul li {
+            font-weight: normal;
+            color: #555;
+        }
+
+        .fiche blockquote {
+            font-style: italic;
+            border-left: 4px solid #007bff;
+            padding-left: 10px;
+            color: #555;
+            margin-left: 20px;
+        }
+    </style>
+  
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <!-- Votre barre de navigation ici -->
+<body>
+    <!-- Navigation Bar -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="/">SocioloGenius</a>
       <button
         class="navbar-toggler"
@@ -32,11 +89,14 @@
           <li class="nav-item">
             <a class="nav-link" href="/">Accueil</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/auteurs.html">Auteurs</a>
+          </li>
           <li class="nav-item active">
             <a class="nav-link" href="/fiche.html">Fiches<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/notions.html">Notions</a>
+            <a class="nav-link" href="/notion.html">Notions</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/contact">Contact</a>
@@ -44,58 +104,64 @@
         </ul>
       </div>
     </nav>
-
-    <main class="container my-5">
-      <h1 class="text-center mb-4">Max Weber</h1>
-
-      <!-- Biography section -->
-      <section id="biography">
-        <h2>Biographie</h2>
-        <p>
-          Max Weber (1864-1920) était un sociologue, économiste et juriste allemand. Il est considéré comme l'un des fondateurs de la sociologie moderne. Son travail a profondément influencé la théorie sociologique et la méthodologie de recherche sociale.
-        </p>
-      </section>
-
-      <!-- Socio-Historical Context -->
-      <section id="context">
-        <h2>Contexte Socio-Historique</h2>
-        <p>
-          Weber a vécu à une époque de profonds bouleversements en Europe. Son époque a été marquée par l'industrialisation rapide, la montée du capitalisme, et les transformations politiques et sociales. Ces changements ont influencé ses réflexions sur la nature de la société et l'autorité.
-        </p>
-      </section>
-
-      <!-- School of Thought -->
-      <section id="thought">
-        <h2>Courant de Pensée</h2>
-        <p>
-          Bien que Weber soit souvent associé au <strong>fonctionnalisme</strong>, il est mieux connu pour son approche compréhensive de la sociologie, qui met l'accent sur la compréhension des actions sociales à travers le prisme des significations subjectives que les individus attribuent à leurs actions.
-        </p>
-      </section>
-
-      <!-- Key Concepts -->
-      <section id="concepts">
-        <h2>Concepts Clés</h2>
+    <div class="fiche">
+        <h1>Max Weber</h1>
+        <section class="biographie">
+            <h2>Biographie</h2>
+            <ul>
+                <li>Max Weber (1864-1920), sociologue, économiste et philosophe allemand.</li>
+                <li>Considéré comme l'un des fondateurs de la sociologie moderne.</li>
+                <li>Connus pour ses analyses sur la rationalisation de la société occidentale.</li>
+              <li>Contexte socio-économique : émergence du capitalisme modernen monté de la bureaucratie et de l'Etat moderne</li>
+            </ul>
+        </section>
+      
+        <section class="courant">
+            <h2>Individualisme méthodologique</h2>
+          <ul>
+            <li>L'individualisme méthodologique est une façon de comprendre les phénomènes sociaux en partant de l'individu. </li>
+            <li>Démarche anti-déterministe et anti-positiviste</li>
+          </ul>
+        </section>
+          
+          <section class="Travaux">
+            <h2>
+              Travaux
+            </h2>
+            <ul>
+                <li>Analyses de la structure sociale et de l'autorité.</li>
+                <li>Études sur l'impact de la culture sur le développement économique.</li>
+            </ul>
+        </section>
+      
+      <section class="concept">
+      <h2>
+         concept
+        </h2>
         <ul>
-          <li>
-            <strong>Types idéaux</strong>: Un outil méthodologique utilisé par Weber pour analyser les phénomènes sociaux. Les types idéaux sont des modèles simplifiés et exagérés qui aident à comprendre le monde social en mettant en évidence ses aspects les plus significatifs.
-          </li>
-          <li>
-            <strong>L'Éthique protestante et l'esprit du capitalisme</strong>: Dans cet ouvrage, Weber explore comment les valeurs religieuses du protestantisme ont contribué au développement du capitalisme moderne en Europe.
-          </li>
-          <li>
-            <strong>Domination</strong>: Weber distingue trois types de domination légitime : traditionnelle, charismatique et légale-rationnelle. Chaque type décrit une manière dont l'autorité est exercée et justifiée dans les sociétés.
-          </li>
+          <li>Ethos : Système de valeur propre à une religion ou à un groupe social</li>
+          <li>L'ethos protestant</li>
+          <li>Idéal type : reconstruction stylisée de la réalité dont l'observateur a isolé les traits jugés les plus significatifs</li>
         </ul>
       </section>
-    </main>
+      
+        <section class="theories">
+            <h2>Théories Principales</h2>
+            <ul>
+                <li>L'Éthique protestante et l'esprit du capitalisme : lien entre la religion et l'économie.</li>
+                <li>La rationalisation : processus de modernisation des sociétés occidentales.</li>
+                <li>La domination : différents types d'autorité et leur influence.</li>
+            </ul>
+        </section>
 
-    <footer class="bg-dark text-white text-center py-4 mt-5">
-      <p>&copy; 2023 SocioloGenius. Tous droits réservés.</p>
-    </footer>
-
-    <!-- Scripts Bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  </body>
+        <section class="citations">
+            <h2>Ouvrages Clés</h2>
+            <ul>
+                <li>L'Éthique protestante et l'esprit du capitalisme (1905)</li>
+                <li>Économie et Société (1922)</li>
+                <li>Le Savant et le Politique (1919)</li>
+            </ul>
+        </section>
+    </div>
+</body>
 </html>
