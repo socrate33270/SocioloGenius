@@ -1,135 +1,249 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Harold Garfinkel - Sociologue</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for('static', filename='styles.css') }}"
-    />
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <meta name="description" content="Explorez l'œuvre d'Erving Goffman sur SocioloGenius et découvrez les concepts clés de la microsociologie. Ressources idéales pour une compréhension approfondie et accessible de la sociologie interactive.">
+<!DOCTYPE html> 
 
-  </head>
-  <body>
-    <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/">SocioloGenius</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/">Accueil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/auteurs.html">Auteurs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/fiche">Fiches</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/notion.html">Notions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+<html lang="fr"> 
 
-    <main class="container my-5">
-      <div class="row">
-        <div class="col">
-          <h1>Harold Garfinkel</h1>
-          <h2>Pionnier de l'ethnométhodologie</h2>
-        </div>
-      </div>
+<head> 
 
-      <!-- Biography section -->
-      <div class="row mt-5">
-        <div class="col-lg-4">
-          <img
-            class="img-fluid"
-            src="{{ url_for('static', filename='garfinkel.jpg') }}"
-            alt="Harold Garfinkel"
-          />
-        </div>
-        <div class="col-lg-8">
-          <h3>Biographie</h3>
-          <p>
-            Harold Garfinkel (1917-2011) était un sociologue américain, connu pour avoir fondé l'ethnométhodologie. Il a étudié les méthodes et pratiques par lesquelles les gens créent du sens et de l'ordre dans leur vie quotidienne, révolutionnant la compréhension sociologique de la réalité sociale.
-          </p>
-        </div>
-      </div>
+  <meta charset="UTF-8"> 
 
-      <!-- Contributions section -->
-      <div class="row mt-5">
-        <div class="col">
-          <h3>Contributions majeures</h3>
-          <ul>
-            <li>
-              <strong>Ethnométhodologie</strong> : Approche de la sociologie qui étudie comment les gens utilisent des méthodes quotidiennes pour construire leur réalité sociale.
-            </li>
-            <li>
-              <strong>Études de « rupture »</strong> : Expériences visant à révéler les normes tacites de la société en les violant délibérément.
-            </li>
-            <li>
-              <strong>Analyses de conversation</strong> : Exploration de la manière dont les conversations structurent l'interaction sociale et la compréhension.
-            </li>
-          </ul>
-        </div>
-      </div>
+  <meta name="description" content="Explorez le monde de la sociologie avec SocioloGenius. Découvrez Erving Goffman, un auteur classique de la sociologie, et plongez dans ses ouvrages majeurs. Apprenez-en plus sur ses concepts clés et ses contributions majeures à la sociologie. Testez vos connaissances avec nos quiz de sociologie."> 
 
-      <!-- Resources section -->
-      <div class="row mt-5">
-        <div class="col">
-          <h3>Ressources supplémentaires</h3>
-          <p>
-            Pour explorer davantage les idées et écrits de Harold Garfinkel :
-          </p>
-          <ul>
-            <li>
-              <a href="https://www.jstor.org/action/doBasicSearch?Query=harold+garfinkel">Articles académiques sur JSTOR</a>
-            </li>
-            <li>
-              <a href="https://www.biography.com/scholar/harold-garfinkel">Biographie de Harold Garfinkel</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+  <meta name="keywords" content="Erving Goffman, Sociologie, Auteurs classiques, Pensée sociologique, Ouvrages, Cours de sociologie, Quiz de sociologie, SocioloGenius"> 
 
-      <!-- Inclusion d'un média, comme une vidéo YouTube -->
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/[lien_de_la_vidéo]"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
-    </main>
+  <meta name="author" content="SocioloGenius"> 
 
-    <footer class="bg-dark text-white text-center py-4 mt-5">
-      <p>&copy; 2023 SocioloGenius. Tous droits réservés.</p>
-    </footer>
+  <title>Erving Goffman | SocioloGenius</title> 
 
-    <!-- Scripts Bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  </body>
-</html>
+</head> 
+
+<!-- Biography --> 
+
+<div class="row"> 
+
+  <div class="col"> 
+
+    <h3>Biographie</h3> 
+
+    <p><strong>Erving Goffman</strong> était un <strong>sociologue</strong> et <strong>écrivain</strong> canadien, né le 11 juin 1922 à Mannville, Canada, et décédé le 19 novembre 1982 à Philadelphie, États-Unis. Il est largement reconnu comme l'un des sociologues les plus influents du XXe siècle. Goffman est surtout connu pour son analyse subtile et révélatrice de la vie sociale quotidienne. Ses travaux ont grandement contribué à notre compréhension de l'interaction sociale et du <strong>comportement humain</strong>, en mettant l'accent sur les aspects dramaturgiques de l'action sociale.</p> 
+
+  </div> 
+
+</div> 
+
+<!-- Space --> 
+
+<div class="row mt-5"></div> 
+
+  
+
+<!-- Socio-historical context --> 
+
+<div class="row"> 
+
+  <div class="col"> 
+
+    <h3>Contexte socio-historique</h3> 
+
+    <p><strong>Erving Goffman</strong> a vécu et travaillé pendant une période de changements sociaux et culturels significatifs, notamment les années 1950 et 1960. Cette époque a été marquée par des mouvements de droits civiques, des changements dans les attitudes envers le genre et la sexualité, et une remise en question croissante de l'autorité institutionnelle. Goffman a été particulièrement influencé par les développements dans les domaines de la <strong>sociologie</strong>, de la <strong>psychologie</strong> et de la <strong>philosophie</strong>. Son travail reflète ces influences et offre un aperçu unique de la vie sociale de cette époque.</p> 
+
+  </div> 
+
+</div> 
+
+ 
+
+<!-- Space --> 
+
+<div class="row mt-5"></div> 
+
+  
+
+<!-- Thought School --> 
+
+<div class="row"> 
+
+  <div class="col"> 
+
+    <h3>Approche sociologique</h3> 
+
+    <p><strong>Erving Goffman</strong> est principalement associé à l'école de pensée connue sous le nom de <strong>sociologie de la vie quotidienne</strong>. Il a développé une approche unique pour étudier les interactions sociales, souvent appelée <strong>analyse dramaturgique</strong>. Dans cette perspective, la vie sociale est vue comme une série de performances théâtrales où les individus jouent des rôles et suivent des scripts dans le but de gérer l'impression qu'ils donnent aux autres. Cette approche a eu une influence profonde sur la sociologie et continue d'être largement utilisée pour analyser les interactions sociales dans une variété de contextes.</p> 
+
+  </div> 
+
+</div> 
+
+ 
+
+<!-- Space --> 
+
+<div class="row mt-5"></div> 
+
+  
+
+<!-- Thought School --> 
+
+<div class="row"> 
+
+  <div class="col"> 
+
+<!-- Space --> 
+
+<div class="row mt-5"></div> 
+
+  
+
+<!-- School and Symbolic Interactionism --> 
+
+<div class="row"> 
+
+  <div class="col"> 
+
+    <h3>École de Chicago et Interactionnisme Symbolique</h3> 
+
+    <p>L'<strong>École de Chicago</strong> est un courant de pensée sociologique américain qui a vu le jour au début du XXe siècle au sein du département de sociologie de l'Université de Chicago⁷. Cette école a joué un rôle crucial dans le développement de l'<strong>interactionnisme symbolique</strong>, une approche qui considère que la société est le produit des interactions entre les individus⁴.</p> 
+
+    <p>L'interactionnisme symbolique met l'accent sur les symboles et les significations que les individus créent et utilisent lors de l'interaction avec les autres⁴. Il s'agit d'une approche qui donne une grande importance à la façon dont les individus agissent en fonction de leurs interprétations des situations sociales⁴.</p> 
+
+    <p>Erving Goffman, en tant que membre de l'École de Chicago, a largement contribué à l'élaboration et au développement de l'interactionnisme symbolique⁴.</p> 
+
+  </div> 
+
+</div>. 
+
+  
+
+  
+
+   <h3>Courant de pensée</h3> 
+
+    <p><strong>Erving Goffman</strong> est célèbre pour son approche dite de la “dramaturgie sociale”. Selon Goffman, la vie sociale est semblable à une pièce de théâtre. Dans nos interactions quotidiennes, nous jouons différents “rôles” en fonction du “public” (les autres personnes présentes).</p> 
+
+    <p>Chaque interaction est une “performance” où nous gérons l’“impression” que nous donnons aux autres. Nous utilisons différents “accessoires” (comme nos vêtements, notre langage corporel, etc.) pour aider à construire ces impressions.</p> 
+
+    <p>Cette approche nous aide à comprendre comment les individus donnent du sens à leurs interactions sociales et comment ils naviguent dans le monde social. Elle souligne l’importance de la “face” (notre image sociale) et comment nous travaillons constamment pour maintenir et gérer cette face dans nos interactions avec les autres.</p> 
+
+    <p>L’approche dramaturgique de Goffman a eu une influence majeure sur la sociologie et continue d’être un cadre important pour comprendre les interactions sociales.</p> 
+
+  </div> 
+
+</div> 
+
+ 
+
+ 
+
+ 
+
+<!-- Footer --> 
+
+<footer> 
+
+  <button class="accordion">Sources</button> 
+
+  <div class="panel"> 
+
+    <ol> 
+
+      <li><a href="https://bing.com/search?q=">undefined</a></li> 
+
+      <li><a href="https://www.universalis.fr/encyclopedie/interactionnisme-symbolique/">INTERACTIONNISME SYMBOLIQUE - Encyclopædia Universalis</a></li> 
+
+      <!-- Add the rest of your sources here --> 
+
+    </ol> 
+
+  </div> 
+
+</footer> 
+
+  
+
+<!-- Accordian CSS --> 
+
+<style> 
+
+.accordion { 
+
+  background-color: #eee; 
+
+  color: #444; 
+
+  cursor: pointer; 
+
+  padding: 18px; 
+
+  width: 100%; 
+
+  border: none; 
+
+  text-align: left; 
+
+  outline: none; 
+
+  font-size: 15px; 
+
+  transition: 0.4s; 
+
+} 
+
+  
+
+.active, .accordion:hover { 
+
+  background-color: #ccc;  
+
+} 
+
+  
+
+.panel { 
+
+  padding: 0 18px; 
+
+  display: none; 
+
+  background-color: white; 
+
+  overflow: hidden; 
+
+} 
+
+</style> 
+
+  
+
+<!-- Accordian JavaScript --> 
+
+<script> 
+
+var acc = document.getElementsByClassName("accordion"); 
+
+var i; 
+
+  
+
+for (i = 0; i < acc.length; i++) { 
+
+  acc[i].addEventListener("click", function() { 
+
+    this.classList.toggle("active"); 
+
+    var panel = this.nextElementSibling; 
+
+    if (panel.style.display === "block") { 
+
+      panel.style.display = "none"; 
+
+    } else { 
+
+      panel.style.display = "block"; 
+
+    } 
+
+  }); 
+
+} 
+
+</script> 
+
+ 
