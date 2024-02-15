@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SocioloGenius</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SocioloGenius est votre portail dédié à la sociologie, offrant un accès gratuit à des ressources éducatives, des fiches synthétiques, des quizz interactifs et bien plus pour étudiants, enseignants et passionnés.">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  </head>
+  <body>
+    <!-- Start of the navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">SocioloGenius</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/auteurs.html">Auteurs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/fiche.html">Fiches</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/notion.html">Notions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/quiz.html">quiz</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- End of the navigation bar -->
+
+      <!-- Section Auteurs -->
+  <section id="auteurs" class="container mt-5">
+      <h1>Les Architectes de la Sociologie</h1>
+      <p class="lead">Embarquez dans un périple intellectuel et découvrez les architectes de la sociologie. De Durkheim à Bourdieu, chaque penseur a apporté sa pierre à l'édifice de cette discipline fascinante.</p>
+    </section>
+      
+    <!-- Émile Durkheim -->
+    <div class="row d-flex align-items-stretch">
+    <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-icon-top">
+          <i class="icon-sociologie-durkheim"></i>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Émile Durkheim</h5>
+          <p class="card-text">Découvrez comment Durkheim a défini les fondements de la sociologie moderne, avec ses études sur le fait social et le suicide.</p>
+          <a href="/emile.html" class="btn btn-primary">En savoir plus</a>
+        </div>
+      </div>
+    </div>
