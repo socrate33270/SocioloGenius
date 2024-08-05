@@ -3,156 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <title>Fiche de Révision - Émile Durkheim</title>
-       <style>
-        .fiche {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            background-color: #f8f8f8;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        .fiche h1, .fiche h2 {
-            color: #2e5266;
-        }
-
-        .fiche h1 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .fiche h2 {
-            border-bottom: 2px solid #6c757d;
-            padding-bottom: 5px;
-            margin-top: 30px;
-        }
-
-        .fiche p, .fiche li {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .fiche ul {
-            list-style-type: square;
-            margin-left: 20px;
-        }
-
-        .fiche ul li {
-            font-weight: bold;
-        }
-
-        .fiche .biographie p, .fiche .citations ul li {
-            font-weight: normal;
-            color: #555;
-        }
-
-        .fiche blockquote {
-            font-style: italic;
-            border-left: 4px solid #007bff;
-            padding-left: 10px;
-            color: #555;
-            margin-left: 20px;
-        }
-      
-       
-      .fiche h3 {
-        text-align : center;
-        }
-        
+    <title>Émile Durkheim - SocioloGenius</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .timeline { position: relative; max-width: 1200px; margin: 0 auto; }
+        .timeline::after { content: ''; position: absolute; width: 6px; background-color: #007bff; top: 0; bottom: 0; left: 50%; margin-left: -3px; }
+        .timeline-item { padding: 10px 40px; position: relative; background-color: inherit; width: 50%; }
+        .timeline-item::after { content: ''; position: absolute; width: 25px; height: 25px; right: -17px; background-color: white; border: 4px solid #007bff; top: 15px; border-radius: 50%; z-index: 1; }
+        .left { left: 0; }
+        .right { left: 50%; }
+        .right::after { left: -16px; }
+        .content { padding: 20px 30px; background-color: white; position: relative; border-radius: 6px; }
     </style>
-  
 </head>
 <body>
-    <!-- Navigation Bar -->
-     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/">SocioloGenius</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/">Accueil</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/auteurs.html">Auteurs</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="/fiche.html">Fiches<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/notion.html">Notions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/contact">Contact</a>
-          </li>
-        </ul>
-      </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">SocioloGenius</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Auteurs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Notions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <div class="fiche">
-        <h1>Émile Durkheim</h1>
-        <section class="biographie">
-            <h2>Biographie</h2>
-            <ul> 
-            <li>  Émile Durkheim (1858-1917).</li>
-                <li>considéré comme le père de la sociologie moderne.</li>
-          <li>contexte socio-politique: 3ème République.
-              <li>Période de modernisation industrielle et de laïcisation en France.</li>
-            </ul>
-        </section>
-      
-        <section class="courant">
-            <h2>École de pensée</h2>
-            <ul>
-                <li>Positivisme: faire de la sociologie une science.</li>
-                <li>Holisme :Analyse la société dans sa totalité pour comprendre les phénomènes sociaux.</li>
-            </ul>
-        </section>
-      
-        <section class="theories">
-            <h2>Théories Principales</h2>
-            <ul>
-                <li>Solidarité Mécanique et Organique.</li>
-                <li>Le fait social </li>
-                <li>L'Anomie : un état de désintégration ou d'absence de normes dans une société.</li>
-                <li>Division sociale du travail : un processus qui permet l'intégration des individus au sein du corps social.</li>
-            </ul>
-        </section>
 
-        <section class="citations">
-            <h2>Ouvrages Clés</h2>
-            <ul>
-                <li>Les Règles de la méthode sociologique (1895)</li>
-                <li>Le Suicide (1897)</li>
-                <li>Les Formes élémentaires de la vie religieuse (1912)</li>
-            </ul>
-        </section>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Émile Durkheim</h1>
+        <h2 class="text-center text-muted mb-5">Le père fondateur de la sociologie moderne</h2>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>"La sociologie n'est pas une partie de la psychologie; chaque science sociale a son domaine propre."</p>
+                            <footer class="blockquote-footer">Émile Durkheim</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="durkheim.jpg" alt="Émile Durkheim" class="img-fluid rounded">
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3>Biographie interactive</h3>
+                <div class="timeline">
+                    <div class="timeline-item left">
+                        <div class="content">
+                            <h4>1858</h4>
+                            <p>Naissance d'Émile Durkheim à Épinal, France</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="content">
+                            <h4>1895</h4>
+                            <p>Publication de "Les Règles de la méthode sociologique"</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="content">
+                            <h4>1897</h4>
+                            <p>Publication de "Le Suicide"</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="content">
+                            <h4>1917</h4>
+                            <p>Décès de Durkheim à Paris</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3>Concepts clés</h3>
+                <div class="accordion" id="accordionConcepts">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Fait social
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionConcepts">
+                            <div class="accordion-body">
+                                Les faits sociaux sont des manières d'agir, de penser et de sentir, extérieures à l'individu, et qui sont douées d'un pouvoir de coercition en vertu duquel ils s'imposent à lui.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Anomie
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionConcepts">
+                            <div class="accordion-body">
+                                L'anomie décrit un état de désorganisation sociale résultant de l'absence de normes communes dans une société.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3>Quiz interactif</h3>
+                <div id="quiz">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Question 1</h5>
+                            <p class="card-text">Quel ouvrage de Durkheim traite du suicide comme phénomène social ?</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q1" id="q1a" value="a">
+                                <label class="form-check-label" for="q1a">Les Règles de la méthode sociologique</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q1" id="q1b" value="b">
+                                <label class="form-check-label" for="q1b">Le Suicide</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q1" id="q1c" value="c">
+                                <label class="form-check-label" for="q1c">De la division du travail social</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="checkQuiz()">Vérifier les réponses</button>
+                </div>
+                <div id="quizResult" class="mt-3"></div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3>Ressources supplémentaires</h3>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#" class="text-decoration-none"><i class="fas fa-book me-2"></i>Les œuvres complètes de Durkheim</a></li>
+                    <li class="list-group-item"><a href="#" class="text-decoration-none"><i class="fas fa-video me-2"></i>Documentaire sur la vie de Durkheim</a></li>
+                    <li class="list-group-item"><a href="#" class="text-decoration-none"><i class="fas fa-university me-2"></i>Cours en ligne sur la sociologie durkheimienne</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <!-- Include your footer here -->
-    <!-- Start of the footer -->
-    <footer class="bg-dark text-white text-center py-4 mt-5">
-      <p>&copy; 2023 SocioloGenius. Tous droits réservés.</p>
-    </footer>
-    <!-- End of the footer -->
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  </body>
-</html>
+    <footer class="bg-light text-center text-lg-start mt-5">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 SocioloGenius - Tous droits réservés
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function checkQuiz() {
+            let score = 0;
+            if (document.getElementById('q1b').checked) score++;
+            document.getElementById('quizResult').innerHTML = `Votre score : ${score}/1`;
+        }
+    </script>
 </body>
 </html>
