@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Émile Durkheim - SocioloGenius</title>
+    <title>Émile Durkheim - Cours Interactif | SocioloGenius</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body { background-color: #f8f9fa; }
+        .concept-card { cursor: pointer; transition: all 0.3s; }
+        .concept-card:hover { transform: scale(1.05); }
         .timeline { position: relative; max-width: 1200px; margin: 0 auto; }
         .timeline::after { content: ''; position: absolute; width: 6px; background-color: #007bff; top: 0; bottom: 0; left: 50%; margin-left: -3px; }
         .timeline-item { padding: 10px 40px; position: relative; background-color: inherit; width: 50%; }
@@ -27,137 +29,196 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Auteurs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Notions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#biographie">Biographie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#concepts">Concepts Clés</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#oeuvres">Œuvres Majeures</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#quiz">Quiz</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <div class="container mt-5">
-        <h1 class="text-center mb-4">Émile Durkheim</h1>
+        <h1 class="text-center mb-4">Émile Durkheim (1858-1917)</h1>
         <h2 class="text-center text-muted mb-5">Le père fondateur de la sociologie moderne</h2>
 
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <blockquote class="blockquote mb-0">
-                            <p>"La sociologie n'est pas une partie de la psychologie; chaque science sociale a son domaine propre."</p>
-                            <footer class="blockquote-footer">Émile Durkheim</footer>
-                        </blockquote>
+        <section id="biographie" class="mb-5">
+            <h3>Biographie Interactive</h3>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h4>1858</h4>
+                        <p>Naissance à Épinal, dans une famille juive</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h4>1879</h4>
+                        <p>Entre à l'École Normale Supérieure</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h4>1887</h4>
+                        <p>Nommé chargé de cours à l'Université de Bordeaux</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h4>1893</h4>
+                        <p>Publication de "De la division du travail social"</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h4>1895</h4>
+                        <p>Publication de "Les Règles de la méthode sociologique"</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h4>1897</h4>
+                        <p>Publication de "Le Suicide"</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h4>1902</h4>
+                        <p>Nommé à la chaire de Science de l'éducation à la Sorbonne</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h4>1912</h4>
+                        <p>Publication de "Les Formes élémentaires de la vie religieuse"</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h4>1917</h4>
+                        <p>Décès à Paris</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <img src="durkheim.jpg" alt="Émile Durkheim" class="img-fluid rounded">
-            </div>
-        </div>
+        </section>
 
-        <div class="row mt-5">
-            <div class="col-12">
-                <h3>Biographie interactive</h3>
-                <div class="timeline">
-                    <div class="timeline-item left">
-                        <div class="content">
-                            <h4>1858</h4>
-                            <p>Naissance d'Émile Durkheim à Épinal, France</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item right">
-                        <div class="content">
-                            <h4>1895</h4>
-                            <p>Publication de "Les Règles de la méthode sociologique"</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item left">
-                        <div class="content">
-                            <h4>1897</h4>
-                            <p>Publication de "Le Suicide"</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item right">
-                        <div class="content">
-                            <h4>1917</h4>
-                            <p>Décès de Durkheim à Paris</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mt-5">
-            <div class="col-12">
-                <h3>Concepts clés</h3>
-                <div class="accordion" id="accordionConcepts">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Fait social
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionConcepts">
-                            <div class="accordion-body">
-                                Les faits sociaux sont des manières d'agir, de penser et de sentir, extérieures à l'individu, et qui sont douées d'un pouvoir de coercition en vertu duquel ils s'imposent à lui.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Anomie
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionConcepts">
-                            <div class="accordion-body">
-                                L'anomie décrit un état de désorganisation sociale résultant de l'absence de normes communes dans une société.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mt-5">
-            <div class="col-12">
-                <h3>Quiz interactif</h3>
-                <div id="quiz">
-                    <div class="card mb-3">
+        <section id="concepts" class="mb-5">
+            <h3>Concepts Clés</h3>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card concept-card" onclick="showConceptDetails('fait-social')">
                         <div class="card-body">
-                            <h5 class="card-title">Question 1</h5>
-                            <p class="card-text">Quel ouvrage de Durkheim traite du suicide comme phénomène social ?</p>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q1" id="q1a" value="a">
-                                <label class="form-check-label" for="q1a">Les Règles de la méthode sociologique</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q1" id="q1b" value="b">
-                                <label class="form-check-label" for="q1b">Le Suicide</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="q1" id="q1c" value="c">
-                                <label class="form-check-label" for="q1c">De la division du travail social</label>
-                            </div>
+                            <h5 class="card-title">Fait Social</h5>
+                            <p class="card-text">Cliquez pour en savoir plus</p>
                         </div>
                     </div>
-                    <button class="btn btn-primary" onclick="checkQuiz()">Vérifier les réponses</button>
                 </div>
-                <div id="quizResult" class="mt-3"></div>
+                <div class="col-md-4 mb-3">
+                    <div class="card concept-card" onclick="showConceptDetails('anomie')">
+                        <div class="card-body">
+                            <h5 class="card-title">Anomie</h5>
+                            <p class="card-text">Cliquez pour en savoir plus</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card concept-card" onclick="showConceptDetails('solidarite')">
+                        <div class="card-body">
+                            <h5 class="card-title">Solidarité Mécanique et Organique</h5>
+                            <p class="card-text">Cliquez pour en savoir plus</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card concept-card" onclick="showConceptDetails('conscience-collective')">
+                        <div class="card-body">
+                            <h5 class="card-title">Conscience Collective</h5>
+                            <p class="card-text">Cliquez pour en savoir plus</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card concept-card" onclick="showConceptDetails('division-travail')">
+                        <div class="card-body">
+                            <h5 class="card-title">Division du Travail Social</h5>
+                            <p class="card-text">Cliquez pour en savoir plus</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card concept-card" onclick="showConceptDetails('religion')">
+                        <div class="card-body">
+                            <h5 class="card-title">Sociologie de la Religion</h5>
+                            <p class="card-text">Cliquez pour en savoir plus</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+            <div id="concept-details" class="mt-3"></div>
+        </section>
 
-        <div class="row mt-5">
-            <div class="col-12">
-                <h3>Ressources supplémentaires</h3>
-                <ul class="list-group">
-                    <li class="list-group-item"><a href="#" class="text-decoration-none"><i class="fas fa-book me-2"></i>Les œuvres complètes de Durkheim</a></li>
-                    <li class="list-group-item"><a href="#" class="text-decoration-none"><i class="fas fa-video me-2"></i>Documentaire sur la vie de Durkheim</a></li>
-                    <li class="list-group-item"><a href="#" class="text-decoration-none"><i class="fas fa-university me-2"></i>Cours en ligne sur la sociologie durkheimienne</a></li>
-                </ul>
+        <section id="oeuvres" class="mb-5">
+            <h3>Œuvres Majeures</h3>
+            <div class="accordion" id="accordionOeuvres">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            De la division du travail social (1893)
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionOeuvres">
+                        <div class="accordion-body">
+                            Dans cet ouvrage, Durkheim examine comment la division du travail affecte la solidarité sociale. Il introduit les concepts de solidarité mécanique et organique.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Les Règles de la méthode sociologique (1895)
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionOeuvres">
+                        <div class="accordion-body">
+                            Durkheim établit les fondements méthodologiques de la sociologie, introduisant le concept de "fait social" et argumentant pour une approche scientifique de l'étude de la société.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Le Suicide (1897)
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionOeuvres">
+                        <div class="accordion-body">
+                            Cette étude pionnière examine le suicide comme un phénomène social, introduisant les concepts d'anomie et d'intégration sociale.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Les Formes élémentaires de la vie religieuse (1912)
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionOeuvres">
+                        <div class="accordion-body">
+                            Durkheim analyse la religion comme un phénomène social, examinant son rôle dans la création et le maintien de la cohésion sociale.
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <section id="quiz" class="mb-5">
+            <h3>Quiz Interactif</h3>
+            <div id="quizContainer">
+                <!-- Les questions seront générées dynamiquement ici -->
+            </div>
+            <button class="btn btn-primary mt-3" onclick="checkQuiz()">Vérifier les réponses</button>
+            <div id="quizResult" class="mt-3"></div>
+        </section>
     </div>
 
     <footer class="bg-light text-center text-lg-start mt-5">
@@ -168,11 +229,101 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        const conceptDetails = {
+            'fait-social': "Les faits sociaux sont des manières d'agir, de penser et de sentir, extérieures à l'individu, et qui sont douées d'un pouvoir de coercition en vertu duquel ils s'imposent à lui.",
+            'anomie': "L'anomie décrit un état de désorganisation sociale résultant de l'absence de normes communes dans une société, souvent lié à des périodes de changement social rapide.",
+            'solidarite': "La solidarité mécanique est caractéristique des sociétés traditionnelles, basée sur la similitude, tandis que la solidarité organique est propre aux sociétés modernes, fondée sur la complémentarité des fonctions.",
+            'conscience-collective': "L'ensemble des croyances et des sentiments communs à la moyenne des membres d'une société, formant un système déterminé qui a sa vie propre.",
+            'division-travail': "Processus par lequel le travail est divisé en tâches spécialisées, conduisant à une interdépendance accrue et à une forme de solidarité organique dans les sociétés modernes.",
+            'religion': "Pour Durkheim, la religion est un système de croyances et de pratiques qui unit ses adhérents en une communauté morale, jouant un rôle crucial dans la cohésion sociale."
+        };
+
+        function showConceptDetails(concept) {
+            document.getElementById('concept-details').innerHTML = `<div class="alert alert-info">${conceptDetails[concept]}</div>`;
+        }
+
+        const quizQuestions = [
+            {
+                question: "Quel concept Durkheim a-t-il introduit dans 'Les Règles de la méthode sociologique' ?",
+                options: ["Fait social", "Anomie", "Solidarité organique"],
+                correct: 0
+            },
+            {
+                question: "Quelle œuvre de Durkheim examine le suicide comme phénomène social ?",
+                options: ["Le Suicide", "De la division du travail social", "Les Formes élémentaires de la vie religieuse"],
+                correct: 0
+            },
+            {
+                question: "Quel type de solidar
+
+                const quizQuestions = [
+            {
+                question: "Quel concept Durkheim a-t-il introduit dans 'Les Règles de la méthode sociologique' ?",
+                options: ["Fait social", "Anomie", "Solidarité organique"],
+                correct: 0
+            },
+            {
+                question: "Quelle œuvre de Durkheim examine le suicide comme phénomène social ?",
+                options: ["Le Suicide", "De la division du travail social", "Les Formes élémentaires de la vie religieuse"],
+                correct: 0
+            },
+            {
+                question: "Quel type de solidarité Durkheim associe-t-il aux sociétés modernes ?",
+                options: ["Solidarité mécanique", "Solidarité organique", "Solidarité anomique"],
+                correct: 1
+            },
+            {
+                question: "Qu'est-ce que Durkheim appelle 'conscience collective' ?",
+                options: ["La somme des consciences individuelles", "L'ensemble des croyances et sentiments communs à une société", "La conscience de classe"],
+                correct: 1
+            },
+            {
+                question: "Dans quelle œuvre Durkheim analyse-t-il la religion comme phénomène social ?",
+                options: ["Le Suicide", "De la division du travail social", "Les Formes élémentaires de la vie religieuse"],
+                correct: 2
+            }
+        ];
+
+        function generateQuiz() {
+            let quizHTML = '';
+            quizQuestions.forEach((q, index) => {
+                quizHTML += `
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Question ${index + 1}</h5>
+                            <p class="card-text">${q.question}</p>
+                            ${q.options.map((option, i) => `
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="q${index}" id="q${index}o${i}" value="${i}">
+                                    <label class="form-check-label" for="q${index}o${i}">${option}</label>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            });
+            document.getElementById('quizContainer').innerHTML = quizHTML;
+        }
+
         function checkQuiz() {
             let score = 0;
-            if (document.getElementById('q1b').checked) score++;
-            document.getElementById('quizResult').innerHTML = `Votre score : ${score}/1`;
+            quizQuestions.forEach((q, index) => {
+                const selectedAnswer = document.querySelector(`input[name="q${index}"]:checked`);
+                if (selectedAnswer && parseInt(selectedAnswer.value) === q.correct) {
+                    score++;
+                }
+            });
+            const resultElement = document.getElementById('quizResult');
+            resultElement.innerHTML = `<div class="alert alert-info">Votre score : ${score}/${quizQuestions.length}</div>`;
+            if (score === quizQuestions.length) {
+                resultElement.innerHTML += '<div class="alert alert-success">Félicitations ! Vous maîtrisez les concepts de Durkheim !</div>';
+            } else {
+                resultElement.innerHTML += '<div class="alert alert-warning">Continuez à réviser pour améliorer votre compréhension de Durkheim.</div>';
+            }
         }
+
+        // Générer le quiz au chargement de la page
+        generateQuiz();
     </script>
 </body>
 </html>
