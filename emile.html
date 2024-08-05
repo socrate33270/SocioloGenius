@@ -18,6 +18,49 @@
         .right { left: 50%; }
         .right::after { left: -16px; }
         .content { padding: 20px 30px; background-color: white; position: relative; border-radius: 6px; }
+
+        .concept-details {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.concept-title {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.concept-intro, .concept-summary {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.concept-characteristics {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.characteristic {
+    flex-basis: 30%;
+    text-align: center;
+}
+
+.characteristic-icon {
+    font-size: 2em;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.characteristic h5 {
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.characteristic p {
+    font-size: 0.9em;
+}
     </style>
 </head>
 <body>
@@ -233,16 +276,37 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         const conceptDetails = {
-            'fait-social': `
-                <h4>Fait Social : concept central</h4>
-                <p>Pour Émile Durkheim, le concept de "fait social" est central à sa sociologie. Il définit le fait social dans son ouvrage "Les Règles de la méthode sociologique" comme suit : :</p>
-                <ul>
-                    <li>Extériorité : Les faits sociaux existent en dehors des individus et leur sont extérieurs. Ils sont des manières d'agir, de penser et de sentir, qui sont externalisées sous forme de normes, valeurs, lois, coutumes, etc</li>
-                    <li>Contrainte : Les faits sociaux exercent une contrainte sur les individus. Ils s'imposent à nous, que nous en soyons conscients ou non, et guident nos comportements. Par exemple, les normes sociales dictent souvent nos actions et nos choix, parfois même contre notre gré.</li>
-                    <li>Généralité : Les faits sociaux sont communs à un groupe ou à une société entière. Ils sont collectifs, c'est-à-dire qu'ils sont partagés par une majorité des membres de la société.</li>
-                </ul>
-                <p>En résumé, pour Durkheim, un fait social est une manière d'agir, de penser et de sentir, extérieure à l'individu et douée d'un pouvoir de coercition en vertu duquel elle s'impose à lui. Ces faits sont diffusés au sein de la société et influencent le comportement des individus en les contraignant.</p>
-                
+           <div class="concept-details">
+    <h4 class="concept-title">Fait Social : La clé pour comprendre la société</h4>
+    
+    <div class="concept-intro">
+        <p>Imaginez que la société a ses propres règles invisibles. C'est ce que Durkheim appelle les "faits sociaux". Voici comment les reconnaître :</p>
+    </div>
+    
+    <div class="concept-characteristics">
+        <div class="characteristic">
+            <i class="fas fa-globe characteristic-icon"></i>
+            <h5>Extériorité</h5>
+            <p>Ces règles existent en dehors de nous. Comme la langue qu'on parle ou les lois qu'on suit.</p>
+        </div>
+        
+        <div class="characteristic">
+            <i class="fas fa-gavel characteristic-icon"></i>
+            <h5>Contrainte</h5>
+            <p>Elles s'imposent à nous, qu'on le veuille ou non. Par exemple, la façon dont on s'habille pour un entretien d'embauche.</p>
+        </div>
+        
+        <div class="characteristic">
+            <i class="fas fa-users characteristic-icon"></i>
+            <h5>Généralité</h5>
+            <p>Tout le monde (ou presque) dans la société les suit. Comme se serrer la main pour se saluer.</p>
+        </div>
+    </div>
+    
+    <div class="concept-summary">
+        <p>En bref, les faits sociaux sont comme les règles d'un grand jeu appelé "société". On les suit souvent sans y penser, mais ils influencent beaucoup ce qu'on fait tous les jours !</p>
+    </div>
+</div>
             `,
             'anomie': `
                 <h4>Anomie : Quand la société perd ses repères</h4>
