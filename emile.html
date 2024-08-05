@@ -1,198 +1,178 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Émile Durkheim - Sociologie et Théorie | SocioloGenius</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Découvrez Émile Durkheim, un pilier de la sociologie moderne. Apprenez sur ses théories de la religion, du fait social, et de l'anomie dans un cours complet et interactif.">
-    <meta name="keywords" content="Émile Durkheim, sociologie, fait social, anomie, théorie sociologique, religion, cours de sociologie">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Ajoutez d'autres balises méta au besoin -->
-  </head>
-  <body>
-    <!-- Include your navigation bar here -->
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/">SocioloGenius</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/auteurs.html">Auteurs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/fiche.html">Fiches</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/notion.html">Notions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/contact">Contact</a>
-          </li>
-        </ul>
-      </div>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Émile Durkheim - SocioloGenius</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .timeline { position: relative; max-width: 1200px; margin: 0 auto; }
+        .timeline::after { content: ''; position: absolute; width: 6px; background-color: #007bff; top: 0; bottom: 0; left: 50%; margin-left: -3px; }
+        .timeline-item { padding: 10px 40px; position: relative; background-color: inherit; width: 50%; }
+        .timeline-item::after { content: ''; position: absolute; width: 25px; height: 25px; right: -17px; background-color: white; border: 4px solid #007bff; top: 15px; border-radius: 50%; z-index: 1; }
+        .left { left: 0; }
+        .right { left: 50%; }
+        .right::after { left: -16px; }
+        .content { padding: 20px 30px; background-color: white; position: relative; border-radius: 6px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">SocioloGenius</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Auteurs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Notions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <main class="container my-5">
-      <div class="row">
-        <div class="col">
-          <h1>Émile Durkheim</h1>
-          <h2>Une figure fondatrice de la sociologie</h2>
-        </div>
-      </div>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Émile Durkheim</h1>
+        <h2 class="text-center text-muted mb-5">Le père fondateur de la sociologie moderne</h2>
 
- <div class="row mt-5">
-  <!-- Citation -->
-  <div class="col-lg-6">
-    <div class="quote-card">
-      <p class="quote-text">"La sociologie n'est pas une partie de la psychologie; chaque science sociale a son domaine propre."</p>
-      <p class="quote-author">— Émile Durkheim</p>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                            <p>"La sociologie n'est pas une partie de la psychologie; chaque science sociale a son domaine propre."</p>
+                            <footer class="blockquote-footer">Émile Durkheim</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="durkheim.jpg" alt="Émile Durkheim" class="img-fluid rounded">
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3>Biographie interactive</h3>
+                <div class="timeline">
+                    <div class="timeline-item left">
+                        <div class="content">
+                            <h4>1858</h4>
+                            <p>Naissance d'Émile Durkheim à Épinal, France</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="content">
+                            <h4>1895</h4>
+                            <p>Publication de "Les Règles de la méthode sociologique"</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="content">
+                            <h4>1897</h4>
+                            <p>Publication de "Le Suicide"</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="content">
+                            <h4>1917</h4>
+                            <p>Décès de Durkheim à Paris</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3>Concepts clés</h3>
+                <div class="accordion" id="accordionConcepts">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Fait social
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionConcepts">
+                            <div class="accordion-body">
+                                Les faits sociaux sont des manières d'agir, de penser et de sentir, extérieures à l'individu, et qui sont douées d'un pouvoir de coercition en vertu duquel ils s'imposent à lui.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Anomie
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionConcepts">
+                            <div class="accordion-body">
+                                L'anomie décrit un état de désorganisation sociale résultant de l'absence de normes communes dans une société.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3>Quiz interactif</h3>
+                <div id="quiz">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Question 1</h5>
+                            <p class="card-text">Quel ouvrage de Durkheim traite du suicide comme phénomène social ?</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q1" id="q1a" value="a">
+                                <label class="form-check-label" for="q1a">Les Règles de la méthode sociologique</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q1" id="q1b" value="b">
+                                <label class="form-check-label" for="q1b">Le Suicide</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="q1" id="q1c" value="c">
+                                <label class="form-check-label" for="q1c">De la division du travail social</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="checkQuiz()">Vérifier les réponses</button>
+                </div>
+                <div id="quizResult" class="mt-3"></div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3>Ressources supplémentaires</h3>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#" class="text-decoration-none"><i class="fas fa-book me-2"></i>Les œuvres complètes de Durkheim</a></li>
+                    <li class="list-group-item"><a href="#" class="text-decoration-none"><i class="fas fa-video me-2"></i>Documentaire sur la vie de Durkheim</a></li>
+                    <li class="list-group-item"><a href="#" class="text-decoration-none"><i class="fas fa-university me-2"></i>Cours en ligne sur la sociologie durkheimienne</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- Image -->
-   <div class"row mt-5">
-     <div class="col-lg-6">
-          <img src="photo-test.jpg" alt="Émile Durkheim" class="img-fluid"/>
+    <footer class="bg-light text-center text-lg-start mt-5">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 SocioloGenius - Tous droits réservés
         </div>
-      </div>
-  
-
-<div class="row mt-5">
-  <!-- Biographie -->
-  <div class="col-lg-12">
-    <h3>Biographie</h3>
-    <p>
-      Émile Durkheim (1858-1917), souvent considéré comme le père de la sociologie moderne, a grandi dans une famille juive dans l'est de la France. Influencé par le contexte socio-politique de son époque, notamment la Troisième République française et ses débats intellectuels, Durkheim a développé une approche unique pour étudier les sociétés. Ses travaux ont posé les jalons de la sociologie, en mettant l'accent sur la compréhension des structures sociales et leur influence sur les individus.
-    </p>
-  </div>
-</div>
-
-
-<div class="row mt-5">
-  <div class="col">
-    <h3>Contexte Socio-historique</h3>
-    <p>
-      Durant la vie de Durkheim, la France a connu de profondes transformations sociales et politiques. La Troisième République, établie en 1870, a été une période de changements rapides, marquée par la modernisation industrielle et la laïcisation. Ces évolutions ont grandement influencé les réflexions de Durkheim sur la société, la religion et l'éducation.
-    </p>
-  </div>
-</div>
-
-
-
-<div class="row mt-5">
-  <div class="col">
-    <h3>La Religion dans la Sociologie de Durkheim</h3>
-    <p>
-      Pour Durkheim, la religion est un système social central qui reflète les structures et les valeurs de la société. Dans "Les Formes élémentaires de la vie religieuse", il argumente que la religion est moins une question de théologie qu'une expression de la cohésion sociale et des normes collectives.
-    </p>
-  </div>
-</div>
-
-
- <div class="row mt-5">
-  <div class="col">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/194Hiih6QAM?si=GnSzPI4zFGTpKCsY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-  </div>
-</div>
-
-
-<div class="row mt-5">
-  <div class="col">
-    <h3>Concepts Majeurs</h3>
-    <ul>
-      <li>
-        <strong>Fait Social</strong>: Durkheim définit les faits sociaux comme des manières d'agir, de penser, et de sentir qui sont externes à l'individu et dotés d'un pouvoir coercitif. Exemple moderne : l'utilisation des réseaux sociaux comme norme sociale.
-      </li>
-      <li>
-        <strong>Anomie</strong>: L'anomie décrit un état de désintégration ou d'absence de normes dans une société, souvent lié à un changement social rapide. Exemple moderne : la désorientation ressentie lors de crises économiques ou technologiques.
-      </li>
-    </ul>
-  </div>
-</div>
-
-
-      <!-- Contributions section -->
-      <div class="row mt-5">
-        <div class="col">
-          <h3>Contributions majeures</h3>
-          <ul>
-            <li>
-              <strong>Les Règles de la méthode sociologique (1895)</strong>:
-              Introduction du concept de "fait social".
-            </li>
-            <li>
-              <strong>Le Suicide (1897)</strong>: Étude empirique démontrant
-              l'impact des structures sociales sur les comportements
-              individuels.
-            </li>
-            <li>
-              <strong
-                >Les Formes élémentaires de la vie religieuse (1912)</strong
-              >: Analyse de la religion en tant qu'expression de la vie sociale.
-            </li>
-          </ul>
-        </div>
-      </div>
-
-     <div class="row mt-5">
-
-     <!-- Image -->
-   <div class"row mt-5">
-     <div class="col-lg-6">
-          <img src="photo-test2.jpg" alt="Émile Durkheim" class="img-fluid"/>
-        </div>
-      </div>
-
-      <!-- Resources section -->
-      <div class="row mt-5">
-        <div class="col">
-          <h3>Ressources supplémentaires</h3>
-          <p>
-            Pour approfondir vos connaissances sur Durkheim, voici quelques
-            ressources que nous recommandons :
-          </p>
-          <ul>
-            <li>
-              <a href="https://www.durkheim.fr/"
-                >Association des Amis d'Émile Durkheim</a
-              >
-            </li>
-            <li>
-              <a href="https://www.jstor.org/journal/revisoci"
-                >Revue de la Sociologie Durkheimienne</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-
-     
-    </main>
-
-    <!-- Include your footer here -->
-    <!-- Start of the footer -->
-    <footer class="bg-dark text-white text-center py-4 mt-5">
-      <p>&copy; 2023 SocioloGenius. Tous droits réservés.</p>
     </footer>
-    <!-- End of the footer -->
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function checkQuiz() {
+            let score = 0;
+            if (document.getElementById('q1b').checked) score++;
+            document.getElementById('quizResult').innerHTML = `Votre score : ${score}/1`;
+        }
+    </script>
+</body>
 </html>
