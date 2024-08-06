@@ -1,7 +1,7 @@
-<html><head><base href="https://sociologenius.com/">
+<html><head><base href="https://sociologenius.com/emile">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sociologenius - Explorateurs de la pensée</title>
+<title>Émile Durkheim - Sociologenius</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
@@ -78,113 +78,146 @@
     padding: 2rem 0;
   }
 
-  .page-title {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    color: var(--primary-color);
-    font-weight: 700;
-  }
-
-  .authors-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-
-  .author-card {
-    background-color: var(--card-bg);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  .author-header {
     display: flex;
-    flex-direction: column;
-    opacity: 0;
-    transform: translateY(20px);
-    position: relative;
-  }
-
-  .author-card.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .author-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  }
-
-  .author-image-container {
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 100%;
+    align-items: center;
+    margin-bottom: 2rem;
   }
 
   .author-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    margin-right: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
 
-  .author-card:hover .author-image {
-    transform: scale(1.1);
-  }
-
-  .author-info {
-    padding: 1.5rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+  .author-intro {
+    flex: 1;
   }
 
   .author-name {
-    font-size: 1.6rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
     color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .author-dates {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
   }
 
   .author-brief {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     margin-bottom: 1rem;
-    flex-grow: 1;
   }
 
-  .read-more {
-    display: inline-block;
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    text-decoration: none;
+  .content-section {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+
+  .concept-list {
+    list-style-type: none;
+  }
+
+  .concept-item {
+    margin-bottom: 1rem;
+  }
+
+  .concept-name {
     font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    text-align: center;
-    align-self: flex-start;
+    color: var(--secondary-color);
   }
 
-  .read-more:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-3px);
+  .work-item {
+    margin-bottom: 1rem;
+  }
+
+  .work-title {
+    font-weight: 600;
+    color: var(--secondary-color);
+  }
+
+  .quote {
+    font-style: italic;
+    border-left: 4px solid var(--secondary-color);
+    padding-left: 1rem;
+    margin: 1rem 0;
   }
 
   @media screen and (max-width: 768px) {
+    .author-header {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .author-image {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+
     .nav-links {
       display: none;
     }
 
-    .page-title {
-      font-size: 2.5rem;
+    .hamburger {
+      display: block;
+      cursor: pointer;
     }
 
-    .authors-grid {
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-active {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: 0;
+      top: 60px;
+      background-color: var(--primary-color);
+      width: 100%;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .nav-active li {
+      margin: 10px 0;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .author-image {
+      width: 150px;
+      height: 150px;
+    }
+
+    .author-name {
+      font-size: 2rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+    }
+
+    .content-section {
+      padding: 1.5rem;
     }
   }
 </style>
@@ -192,121 +225,147 @@
 <body>
   <header>
     <nav class="container">
-      <div class="logo">Sociologenius</div>
+      <div class="logo">SocioLogenius</div>
       <ul class="nav-links">
         <li><a href="/">Accueil</a></li>
         <li><a href="/auteurs">Penseurs</a></li>
         <li><a href="/quiz">Quiz</a></li>
         <li><a href="/contact">Contact</a></li>
       </ul>
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </nav>
   </header>
 
   <main class="container">
-    <h1 class="page-title">Explorateurs de la pensée sociale</h1>
-    <div class="authors-grid">
-      <div class="author-card">
-        <div class="author-image-container">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Emile_Durkheim.jpg" alt="Portrait d'Émile Durkheim" class="author-image">
-        </div>
-        <div class="author-info">
-          <h2 class="author-name">Émile Durkheim</h2>
-          <p class="author-brief">Le père fondateur de la sociologie française qui a révolutionné notre compréhension de la société.</p>
-          <a href="/auteurs/emile-durkheim" class="read-more">Découvrir</a>
-        </div>
+    <section class="author-header">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Emile_Durkheim.jpg" alt="Portrait d'Émile Durkheim" class="author-image">
+      <div class="author-intro">
+        <h1 class="author-name">Émile Durkheim</h1>
+        <p class="author-dates">1858 - 1917</p>
+        <p class="author-brief">Considéré comme l'un des pères fondateurs de la sociologie moderne, Émile Durkheim a révolutionné notre compréhension des structures sociales et de leur influence sur le comportement individuel.</p>
       </div>
-      <div class="author-card">
-        <div class="author-image-container">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Max_Weber_1917.jpg" alt="Portrait de Max Weber" class="author-image">
-        </div>
-        <div class="author-info">
-          <h2 class="author-name">Max Weber</h2>
-          <p class="author-brief">L'architecte de la sociologie compréhensive qui a exploré les liens entre économie et société.</p>
-          <a href="/auteurs/max-weber" class="read-more">Explorer</a>
-        </div>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-title">Concepts clés</h2>
+      <ul class="concept-list">
+        <li class="concept-item">
+          <span class="concept-name">Fait social :</span> Manières d'agir, de penser et de sentir extérieures à l'individu et qui exercent une contrainte sur lui.
+        </li>
+        <li class="concept-item">
+          <span class="concept-name">Solidarité mécanique et organique :</span> Deux formes de cohésion sociale, la première basée sur la similitude des individus, la seconde sur leur complémentarité.
+        </li>
+        <li class="concept-item">
+          <span class="concept-name">Anomie :</span> État de désorganisation sociale résultant de l'absence ou de l'affaiblissement des normes sociales.
+        </li>
+        <li class="concept-item">
+          <span class="concept-name">Conscience collective :</span> Ensemble des croyances et des sentiments communs à la moyenne des membres d'une société.
+        </li>
+      </ul>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-title">Œuvres majeures</h2>
+      <div class="work-item">
+        <h3 class="work-title">De la division du travail social (1893)</h3>
+        <p>Analyse les différentes formes de solidarité sociale et leur évolution dans les sociétés modernes.</p>
       </div>
-      <div class="author-card">
-        <div class="author-image-container">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Pierre_Bourdieu_%281%29.jpg" alt="Portrait de Pierre Bourdieu" class="author-image">
-        </div>
-        <div class="author-info">
-          <h2 class="author-name">Pierre Bourdieu</h2>
-          <p class="author-brief">Le décodeur des mécanismes subtils de la domination sociale et culturelle.</p>
-          <a href="/auteurs/pierre-bourdieu" class="read-more">Approfondir</a>
-        </div>
+      <div class="work-item">
+        <h3 class="work-title">Les Règles de la méthode sociologique (1895)</h3>
+        <p>Établit les fondements méthodologiques de la sociologie en tant que science autonome.</p>
       </div>
-      <div class="author-card">
-        <div class="author-image-container">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Karl_Marx_001.jpg" alt="Portrait de Karl Marx" class="author-image">
-        </div>
-        <div class="author-info">
-          <h2 class="author-name">Karl Marx</h2>
-          <p class="author-brief">Le penseur révolutionnaire dont l'analyse critique du capitalisme continue d'influencer la sociologie.</p>
-          <a href="/auteurs/karl-marx" class="read-more">Étudier</a>
-        </div>
+      <div class="work-item">
+        <h3 class="work-title">Le Suicide (1897)</h3>
+        <p>Étudie les causes sociales du suicide et démontre l'influence des facteurs sociaux sur un acte apparemment individuel.</p>
       </div>
-      <div class="author-card">
-        <div class="author-image-container">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Erving_Goffman.jpg" alt="Portrait d'Erving Goffman" class="author-image">
-        </div>
-        <div class="author-info">
-          <h2 class="author-name">Erving Goffman</h2>
-          <p class="author-brief">Le metteur en scène de la vie quotidienne qui a décodé les rituels de l'interaction sociale.</p>
-          <a href="/auteurs/erving-goffman" class="read-more">Décrypter</a>
-        </div>
+      <div class="work-item">
+        <h3 class="work-title">Les Formes élémentaires de la vie religieuse (1912)</h3>
+        <p>Examine les origines sociales de la religion et son rôle dans la cohésion sociale.</p>
       </div>
-      <div class="author-card">
-        <div class="author-image-container">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Crozier_Michel.jpg" alt="Portrait de Michel Crozier" class="author-image">
-        </div>
-        <div class="author-info">
-          <h2 class="author-name">Michel Crozier</h2>
-          <p class="author-brief">L'analyste des organisations qui a révolutionné notre compréhension des systèmes bureaucratiques.</p>
-          <a href="/auteurs/michel-crozier" class="read-more">Comprendre</a>
-        </div>
-      </div>
-      <div class="author-card">
-        <div class="author-image-container">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Gary_Becker_2004.jpg" alt="Portrait de Gary Becker" class="author-image">
-        </div>
-        <div class="author-info">
-          <h2 class="author-name">Gary Becker</h2>
-          <p class="author-brief">L'économiste qui a appliqué l'analyse économique aux comportements sociaux de manière innovante.</p>
-          <a href="/auteurs/gary-becker" class="read-more">Examiner</a>
-        </div>
-      </div>
-      <div class="author-card">
-        <div class="author-image-container">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Howard_Becker_%282011%29.jpg/800px-Howard_Becker_%282011%29.jpg" alt="Portrait de Howard Becker" class="author-image">
-        </div>
-        <div class="author-info">
-          <h2 class="author-name">Howard Becker</h2>
-          <p class="author-brief">Le sociologue de la déviance et de l'art qui a révolutionné la méthodologie en sciences sociales.</p>
-          <a href="/auteurs/howard-becker" class="read-more">Explorer</a>
-        </div>
-      </div>
-    </div>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-title">L'héritage de Durkheim</h2>
+      <p>L'influence de Durkheim sur la sociologie et les sciences sociales en général est immense. Ses travaux ont jeté les bases de nombreux domaines de recherche, notamment :</p>
+      <ul>
+        <li>La sociologie de la religion</li>
+        <li>La criminologie</li>
+        <li>La sociologie de l'éducation</li>
+        <li>L'étude des représentations collectives</li>
+      </ul>
+      <p>Ses méthodes et concepts continuent d'inspirer les chercheurs contemporains dans leur analyse des phénomènes sociaux.</p>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-title">Citation célèbre</h2>
+      <blockquote class="quote">
+        "Le social s'explique par le social."
+      </blockquote>
+      <p>Cette phrase résume l'approche de Durkheim, qui cherchait à expliquer les phénomènes sociaux par d'autres faits sociaux, plutôt que par des facteurs individuels ou psychologiques.</p>
+    </section>
   </main>
 
   <script>
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1
-    };
+    function animateOnScroll() {
+      const elements = document.querySelectorAll('.content-section');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
 
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in');
-          observer.unobserve(entry.target);
-        }
+      elements.forEach(element => {
+        observer.observe(element);
       });
-    }, observerOptions);
+    }
 
-    document.querySelectorAll('.author-card').forEach(card => {
-      observer.observe(card);
+    document.addEventListener('DOMContentLoaded', () => {
+      animateOnScroll();
+      
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-active');
+        hamburger.classList.toggle('toggle');
+      });
     });
   </script>
+
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .content-section {
+      opacity: 0;
+    }
+
+    .toggle .line1 {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .line2 {
+      opacity: 0;
+    }
+
+    .toggle .line3 {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+  </style>
 </body>
 </html>
