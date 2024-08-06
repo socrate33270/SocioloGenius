@@ -1,375 +1,312 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Émile Durkheim - Sociologie pour tous | SocioloGenius</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
+<html><head><base href="https://sociologenius.com/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sociologenius - Explorateurs de la pensée</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-    <style>
-        body { background-color: #f8f9fa; }
-        .concept-card { cursor: pointer; transition: all 0.3s; }
-        .concept-card:hover { transform: scale(1.05); }
-        .timeline { position: relative; max-width: 1200px; margin: 0 auto; }
-        .timeline::after { content: ''; position: absolute; width: 6px; background-color: #007bff; top: 0; bottom: 0; left: 50%; margin-left: -3px; }
-        .timeline-item { padding: 10px 40px; position: relative; background-color: inherit; width: 50%; }
-        .timeline-item::after { content: ''; position: absolute; width: 25px; height: 25px; right: -17px; background-color: white; border: 4px solid #007bff; top: 15px; border-radius: 50%; z-index: 1; }
-        .left { left: 0; }
-        .right { left: 50%; }
-        .right::after { left: -16px; }
-        .content { padding: 20px 30px; background-color: white; position: relative; border-radius: 6px; }
+  :root {
+    --primary-color: #6c5ce7;
+    --secondary-color: #fd79a8;
+    --background-color: #f9f9f9;
+    --text-color: #2d3436;
+    --card-bg: #ffffff;
+  }
 
-        .concept-details {
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-.concept-title {
-    color: #007bff;
-    margin-bottom: 20px;
-}
-
-.concept-intro, .concept-summary {
-    font-size: 1.1em;
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
     line-height: 1.6;
-}
+  }
 
-.concept-characteristics {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  header {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+
+  nav {
     display: flex;
     justify-content: space-between;
-    margin: 30px 0;
-}
+    align-items: center;
+  }
 
-.characteristic {
-    flex-basis: 30%;
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+
+  .nav-links li {
+    margin-left: 20px;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: var(--secondary-color);
+  }
+
+  main {
+    margin-top: 80px;
+    padding: 2rem 0;
+  }
+
+  .page-title {
     text-align: center;
-}
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    font-weight: 700;
+  }
 
-.characteristic-icon {
-    font-size: 2em;
-    color: #28a745;
-    margin-bottom: 10px;
-}
+  .authors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+  }
 
-.characteristic h5 {
-    color: #343a40;
-    margin-bottom: 10px;
-}
+  .author-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(20px);
+    position: relative;
+  }
 
-.characteristic p {
-    font-size: 0.9em;
-}
-    </style>
+  .author-card.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .author-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .author-image-container {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 100%;
+  }
+
+  .author-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .author-card:hover .author-image {
+    transform: scale(1.1);
+  }
+
+  .author-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .author-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+  }
+
+  .author-brief {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+  }
+
+  .read-more {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    align-self: flex-start;
+  }
+
+  .read-more:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+  }
+
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+
+    .page-title {
+      font-size: 2.5rem;
+    }
+
+    .authors-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+</style>
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">SocioloGenius</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-home"></i> Accueil</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-users"></i> Sociologues
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Émile Durkheim</a></li>
-                            <li><a class="dropdown-item" href="#">Max Weber</a></li>
-                            <li><a class="dropdown-item" href="#">Pierre Bourdieu</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#concepts"><i class="fas fa-lightbulb"></i> Grandes Idées</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#oeuvres"><i class="fas fa-book"></i> Livres Importants</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-question-circle"></i> Quiz</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-envelope"></i> Contact</a></li>
-                </ul>
-            </div>
-        </div>
+  <header>
+    <nav class="container">
+      <div class="logo">Sociologenius</div>
+      <ul class="nav-links">
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/auteurs">Penseurs</a></li>
+        <li><a href="/quiz">Quiz</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <div class="container mt-5">
-        <h1 class="text-center mb-4">Émile Durkheim (1858-1917)</h1>
-        <h2 class="text-center text-muted mb-5">Le papa de la sociologie moderne</h2>
-
-        <section id="biographie" class="mb-5">
-            <h3>La vie de Durkheim en quelques dates</h3>
-            <div class="timeline">
-                <div class="timeline-item left">
-                    <div class="content">
-                        <h4>1858</h4>
-                        <p>Naissance à Épinal, dans une famille juive</p>
-                    </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="content">
-                        <h4>1879</h4>
-                        <p>Entre à l'École Normale Supérieure (comme un super lycée pour devenir prof)</p>
-                    </div>
-                </div>
-                <div class="timeline-item left">
-                    <div class="content">
-                        <h4>1887</h4>
-                        <p>Devient prof à l'Université de Bordeaux</p>
-                    </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="content">
-                        <h4>1893</h4>
-                        <p>Écrit son premier gros livre "De la division du travail social"</p>
-                    </div>
-                </div>
-                <div class="timeline-item left">
-                    <div class="content">
-                        <h4>1895</h4>
-                        <p>Écrit "Les Règles de la méthode sociologique" (comment étudier la société)</p>
-                    </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="content">
-                        <h4>1897</h4>
-                        <p>Publie "Le Suicide" (pourquoi les gens se suicident ?)</p>
-                    </div>
-                </div>
-                <div class="timeline-item left">
-                    <div class="content">
-                        <h4>1902</h4>
-                        <p>Devient prof à la Sorbonne (la grande université de Paris)</p>
-                    </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="content">
-                        <h4>1912</h4>
-                        <p>Écrit sur la religion dans "Les Formes élémentaires de la vie religieuse"</p>
-                    </div>
-                </div>
-                <div class="timeline-item left">
-                    <div class="content">
-                        <h4>1917</h4>
-                        <p>Décès à Paris</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="concepts" class="mb-5">
-            <h3>Les grandes idées de Durkheim</h3>
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <div class="card concept-card" onclick="showConceptDetails('fait-social')">
-                        <div class="card-body">
-                            <h5 class="card-title">Fait Social</h5>
-                            <p class="card-text">Les règles invisibles de la société</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="card concept-card" onclick="showConceptDetails('anomie')">
-                        <div class="card-body">
-                            <h5 class="card-title">Anomie</h5>
-                            <p class="card-text">Quand la société perd ses repères</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="card concept-card" onclick="showConceptDetails('solidarite')">
-                        <div class="card-body">
-                            <h5 class="card-title">Solidarité dans la société</h5>
-                            <p class="card-text">Comment on reste unis ?</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="card concept-card" onclick="showConceptDetails('conscience-collective')">
-                        <div class="card-body">
-                            <h5 class="card-title">Conscience Collective</h5>
-                            <p class="card-text">Ce qu'on pense tous ensemble</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="card concept-card" onclick="showConceptDetails('division-travail')">
-                        <div class="card-body">
-                            <h5 class="card-title">Division du Travail</h5>
-                            <p class="card-text">Chacun son job, tous ensemble</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="card concept-card" onclick="showConceptDetails('religion')">
-                        <div class="card-body">
-                            <h5 class="card-title">La Religion et la Société</h5>
-                            <p class="card-text">Pourquoi on croit ?</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="concept-details" class="mt-3"></div>
-        </section>
-
-        <section id="oeuvres" class="mb-5">
-            <h3>Les livres importants de Durkheim</h3>
-            <div class="accordion" id="accordionOeuvres">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            De la division du travail social (1893)
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionOeuvres">
-                        <div class="accordion-body">
-                            Dans ce livre, Durkheim explique comment le fait que chacun ait un métier différent nous rend tous dépendants les uns des autres, et comment ça crée une nouvelle façon d'être unis dans la société moderne.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Les Règles de la méthode sociologique (1895)
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionOeuvres">
-                        <div class="accordion-body">
-                            C'est comme un mode d'emploi pour étudier la société. Durkheim y explique comment observer et comprendre les "faits sociaux", ces choses qui existent dans la société et qui influencent nos comportements sans qu'on s'en rende compte.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Le Suicide (1897)
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionOeuvres">
-                        <div class="accordion-body">
-                            Ici, Durkheim montre que même quelque chose d'aussi personnel que le suicide peut s'expliquer par des raisons sociales. Il prouve que les changements dans la société peuvent affecter le taux de suicide.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            Les Formes élémentaires de la vie religieuse (1912)
-                        </button>
-                    </h2>
-                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionOeuvres">
-                        <div class="accordion-body">
-                            Dans ce livre, Durkheim explique que la religion n'est pas qu'une affaire de croyance, mais aussi une façon pour la société de se représenter elle-même et de rester unie. Il montre comment les rituels religieux renforcent les liens entre les gens.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <footer class="bg-light text-center text-lg-start mt-5">
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2023 SocioloGenius - Pour comprendre la société, c'est par ici !
+  <main class="container">
+    <h1 class="page-title">Explorateurs de la pensée sociale</h1>
+    <div class="authors-grid">
+      <div class="author-card">
+        <div class="author-image-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Emile_Durkheim.jpg" alt="Portrait d'Émile Durkheim" class="author-image">
         </div>
-    </footer>
+        <div class="author-info">
+          <h2 class="author-name">Émile Durkheim</h2>
+          <p class="author-brief">Le père fondateur de la sociologie française qui a révolutionné notre compréhension de la société.</p>
+          <a href="/auteurs/emile-durkheim" class="read-more">Découvrir</a>
+        </div>
+      </div>
+      <div class="author-card">
+        <div class="author-image-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Max_Weber_1917.jpg" alt="Portrait de Max Weber" class="author-image">
+        </div>
+        <div class="author-info">
+          <h2 class="author-name">Max Weber</h2>
+          <p class="author-brief">L'architecte de la sociologie compréhensive qui a exploré les liens entre économie et société.</p>
+          <a href="/auteurs/max-weber" class="read-more">Explorer</a>
+        </div>
+      </div>
+      <div class="author-card">
+        <div class="author-image-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Pierre_Bourdieu_%281%29.jpg" alt="Portrait de Pierre Bourdieu" class="author-image">
+        </div>
+        <div class="author-info">
+          <h2 class="author-name">Pierre Bourdieu</h2>
+          <p class="author-brief">Le décodeur des mécanismes subtils de la domination sociale et culturelle.</p>
+          <a href="/auteurs/pierre-bourdieu" class="read-more">Approfondir</a>
+        </div>
+      </div>
+      <div class="author-card">
+        <div class="author-image-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Karl_Marx_001.jpg" alt="Portrait de Karl Marx" class="author-image">
+        </div>
+        <div class="author-info">
+          <h2 class="author-name">Karl Marx</h2>
+          <p class="author-brief">Le penseur révolutionnaire dont l'analyse critique du capitalisme continue d'influencer la sociologie.</p>
+          <a href="/auteurs/karl-marx" class="read-more">Étudier</a>
+        </div>
+      </div>
+      <div class="author-card">
+        <div class="author-image-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Erving_Goffman.jpg" alt="Portrait d'Erving Goffman" class="author-image">
+        </div>
+        <div class="author-info">
+          <h2 class="author-name">Erving Goffman</h2>
+          <p class="author-brief">Le metteur en scène de la vie quotidienne qui a décodé les rituels de l'interaction sociale.</p>
+          <a href="/auteurs/erving-goffman" class="read-more">Décrypter</a>
+        </div>
+      </div>
+      <div class="author-card">
+        <div class="author-image-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Crozier_Michel.jpg" alt="Portrait de Michel Crozier" class="author-image">
+        </div>
+        <div class="author-info">
+          <h2 class="author-name">Michel Crozier</h2>
+          <p class="author-brief">L'analyste des organisations qui a révolutionné notre compréhension des systèmes bureaucratiques.</p>
+          <a href="/auteurs/michel-crozier" class="read-more">Comprendre</a>
+        </div>
+      </div>
+      <div class="author-card">
+        <div class="author-image-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Gary_Becker_2004.jpg" alt="Portrait de Gary Becker" class="author-image">
+        </div>
+        <div class="author-info">
+          <h2 class="author-name">Gary Becker</h2>
+          <p class="author-brief">L'économiste qui a appliqué l'analyse économique aux comportements sociaux de manière innovante.</p>
+          <a href="/auteurs/gary-becker" class="read-more">Examiner</a>
+        </div>
+      </div>
+      <div class="author-card">
+        <div class="author-image-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Howard_Becker_%282011%29.jpg/800px-Howard_Becker_%282011%29.jpg" alt="Portrait de Howard Becker" class="author-image">
+        </div>
+        <div class="author-info">
+          <h2 class="author-name">Howard Becker</h2>
+          <p class="author-brief">Le sociologue de la déviance et de l'art qui a révolutionné la méthodologie en sciences sociales.</p>
+          <a href="/auteurs/howard-becker" class="read-more">Explorer</a>
+        </div>
+      </div>
+    </div>
+  </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const conceptDetails = {
-           <div class="concept-details">
-    <h4 class="concept-title">Fait Social : La clé pour comprendre la société</h4>
-    
-    <div class="concept-intro">
-        <p>Imaginez que la société a ses propres règles invisibles. C'est ce que Durkheim appelle les "faits sociaux". Voici comment les reconnaître :</p>
-    </div>
-    
-    <div class="concept-characteristics">
-        <div class="characteristic">
-            <i class="fas fa-globe characteristic-icon"></i>
-            <h5>Extériorité</h5>
-            <p>Ces règles existent en dehors de nous. Comme la langue qu'on parle ou les lois qu'on suit.</p>
-        </div>
-        
-        <div class="characteristic">
-            <i class="fas fa-gavel characteristic-icon"></i>
-            <h5>Contrainte</h5>
-            <p>Elles s'imposent à nous, qu'on le veuille ou non. Par exemple, la façon dont on s'habille pour un entretien d'embauche.</p>
-        </div>
-        
-        <div class="characteristic">
-            <i class="fas fa-users characteristic-icon"></i>
-            <h5>Généralité</h5>
-            <p>Tout le monde (ou presque) dans la société les suit. Comme se serrer la main pour se saluer.</p>
-        </div>
-    </div>
-    
-    <div class="concept-summary">
-        <p>En bref, les faits sociaux sont comme les règles d'un grand jeu appelé "société". On les suit souvent sans y penser, mais ils influencent beaucoup ce qu'on fait tous les jours !</p>
-    </div>
-</div>
-            `,
-            'anomie': `
-                <h4>Anomie : Quand la société perd ses repères</h4>
-                <p>L'anomie, c'est comme si d'un coup, toutes les règles du jeu de la société disparaissaient. Ça arrive quand :</p>
-                <ul>
-                    <li>La société change trop vite</li>
-                    <li>Les gens ne savent plus ce qui est bien ou mal</li>
-                    <li>On ne sait plus à quoi s'attendre des autres</li>
-                </ul>
-                <p>Durkheim pensait que ça pouvait rendre les gens malheureux et même augmenter le nombre de suicides.</p>
-            `,
-            'solidarite': `
-                <h4>Solidarité dans la société : Comment on reste unis ?</h4>
-                <p>Durkheim a remarqué deux façons d'être unis dans une société :</p>
-                <h5>1. Solidarité mécanique (dans les vieilles sociétés) :</h5>
-                <ul>
-                    <li>Tout le monde fait à peu près la même chose</li>
-                    <li>On est unis parce qu'on se ressemble</li>
-                </ul>
-                <h5>2. Solidarité organique (dans les sociétés modernes) :</h5>
-                <ul>
-                  <li>Chacun a un job différent</li>
-                    <li>On est unis parce qu'on a besoin les uns des autres</li>
-                </ul>
-                <p>C'est un peu comme passer d'une équipe où tout le monde fait la même chose à une équipe où chacun a un rôle spécial !</p>
-            `,
-            'conscience-collective': `
-                <h4>Conscience Collective : Ce qu'on pense tous ensemble</h4>
-                <p>Imagine que la société a un grand cerveau fait de toutes nos pensées mélangées. C'est ça, la conscience collective ! Elle comprend :</p>
-                <ul>
-                    <li>Nos valeurs communes (ce qu'on trouve bien ou mal)</li>
-                    <li>Nos traditions</li>
-                    <li>Nos croyances partagées</li>
-                </ul>
-                <p>C'est ce qui fait qu'on se sent appartenir à un même groupe, comme une équipe de foot qui a le même esprit d'équipe.</p>
-            `,
-            'division-travail': `
-                <h4>Division du Travail : Chacun son job, tous ensemble</h4>
-                <p>C'est l'idée que dans une société moderne, chacun a un travail spécialisé. C'est cool parce que :</p>
-                <ul>
-                    <li>On produit plus de choses ensemble</li>
-                    <li>On a besoin les uns des autres (le boulanger a besoin du fermier, qui a besoin du mécanicien, etc.)</li>
-                    <li>Ça crée des liens entre nous, même si on est tous différents</li>
-                </ul>
-                <p>Mais attention, Durkheim dit que si c'est mal organisé, ça peut aussi créer des problèmes et des tensions.</p>
-            `,
-            'religion': `
-                <h4>La Religion et la Société : Pourquoi on croit ?</h4>
-                <p>Durkheim pensait que la religion, ce n'est pas que croire en dieu. C'est surtout :</p>
-                <ul>
-                    <li>Une façon pour la société de se représenter elle-même</li>
-                    <li>Un moyen de renforcer les liens entre les gens</li>
-                    <li>Une manière de créer des règles et des valeurs communes</li>
-                </ul>
-                <p>Pour lui, quand on célèbre un dieu, on célèbre en fait un peu notre propre société !</p>
-            `
-        };
+  <script>
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
 
-        function showConceptDetails(concept) {
-            document.getElementById('concept-details').innerHTML = `<div class="card"><div class="card-body">${conceptDetails[concept]}</div></div>`;
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+          observer.unobserve(entry.target);
         }
-    </script>
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.author-card').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
 </body>
 </html>
