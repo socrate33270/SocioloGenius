@@ -1,16 +1,15 @@
-<html><head><base href="https://sociologenius.com">
+<html><head><base href="https://sociologenius.com/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SocioLogenius - Grands noms de la sociologie</title>
+<title>Sociologenius - Explorateurs de la pensée</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
   :root {
-    --primary-color: #3498db;
-    --secondary-color: #2c3e50;
-    --accent-color: #e74c3c;
-    --background-color: #ecf0f1;
-    --text-color: #34495e;
+    --primary-color: #6c5ce7;
+    --secondary-color: #fd79a8;
+    --background-color: #f9f9f9;
+    --text-color: #2d3436;
     --card-bg: #ffffff;
   }
 
@@ -21,7 +20,7 @@
   }
 
   body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
@@ -35,13 +34,11 @@
 
   header {
     background-color: var(--primary-color);
-    color: white;
     padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
 
   nav {
@@ -51,9 +48,9 @@
   }
 
   .logo {
-    font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
     font-weight: 700;
+    color: white;
   }
 
   .nav-links {
@@ -73,7 +70,7 @@
   }
 
   .nav-links a:hover {
-    color: var(--accent-color);
+    color: var(--secondary-color);
   }
 
   main {
@@ -82,29 +79,30 @@
   }
 
   .page-title {
-    font-family: 'Playfair Display', serif;
     text-align: center;
     font-size: 3rem;
     margin-bottom: 2rem;
-    color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: 700;
   }
 
   .authors-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
   }
 
   .author-card {
     background-color: var(--card-bg);
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     opacity: 0;
     transform: translateY(20px);
+    position: relative;
   }
 
   .author-card.fade-in {
@@ -113,14 +111,28 @@
   }
 
   .author-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .author-image-container {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 100%;
   }
 
   .author-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 250px;
+    height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .author-card:hover .author-image {
+    transform: scale(1.1);
   }
 
   .author-info {
@@ -128,36 +140,38 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    position: relative;
   }
 
   .author-name {
-    font-family: 'Playfair Display', serif;
     font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    color: var(--secondary-color);
+    color: var(--primary-color);
   }
 
   .author-brief {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-bottom: 1rem;
     flex-grow: 1;
   }
 
   .read-more {
     display: inline-block;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: white;
     padding: 0.5rem 1rem;
-    border-radius: 5px;
+    border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     text-align: center;
+    align-self: flex-start;
   }
 
   .read-more:hover {
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
   }
 
   @media screen and (max-width: 768px) {
@@ -181,7 +195,7 @@
       <div class="logo">Sociologenius</div>
       <ul class="nav-links">
         <li><a href="/">Accueil</a></li>
-        <li><a href="/auteurs">Auteurs</a></li>
+        <li><a href="/auteurs">Penseurs</a></li>
         <li><a href="/quiz">Quiz</a></li>
         <li><a href="/contact">Contact</a></li>
       </ul>
@@ -189,78 +203,86 @@
   </header>
 
   <main class="container">
-    <h1 class="page-title">Explorateurs de la pensée sociologenius</h1>
+    <h1 class="page-title">Explorateurs de la pensée sociale</h1>
     <div class="authors-grid">
       <div class="author-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Emile_Durkheim.jpg" alt="Portrait d'Émile Durkheim" class="author-image">
+        <div class="author-image-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Emile_Durkheim.jpg" alt="Portrait d'Émile Durkheim" class="author-image">
+        </div>
         <div class="author-info">
           <h2 class="author-name">Émile Durkheim</h2>
-          <p class="author-brief">Pionnier de la sociologie française, Durkheim a révolutionné notre compréhension de la cohésion sociale et des phénomènes collectifs.</p>
-          <a href="/auteurs/emile-durkheim" class="read-more">Découvrir ses idées</a>
+          <p class="author-brief">Le père fondateur de la sociologie française qui a révolutionné notre compréhension de la société.</p>
+          <a href="/auteurs/emile-durkheim" class="read-more">Découvrir</a>
         </div>
       </div>
       <div class="author-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Max_Weber_1917.jpg" alt="Portrait de Max Weber" class="author-image">
+        <div class="author-image-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Max_Weber_1917.jpg" alt="Portrait de Max Weber" class="author-image">
+        </div>
         <div class="author-info">
           <h2 class="author-name">Max Weber</h2>
-          <p class="author-brief">Figure emblématique de la sociologie allemande, Weber a exploré les liens entre économie, religion et structures sociales.</p>
-          <a href="/auteurs/max-weber" class="read-more">Explorer sa pensée</a>
+          <p class="author-brief">L'architecte de la sociologie compréhensive qui a exploré les liens entre économie et société.</p>
+          <a href="/auteurs/max-weber" class="read-more">Explorer</a>
         </div>
       </div>
       <div class="author-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Pierre_Bourdieu_%281%29.jpg" alt="Portrait de Pierre Bourdieu" class="author-image">
+        <div class="author-image-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Pierre_Bourdieu_%281%29.jpg" alt="Portrait de Pierre Bourdieu" class="author-image">
+        </div>
         <div class="author-info">
           <h2 class="author-name">Pierre Bourdieu</h2>
-          <p class="author-brief">Sociologue français influent, Bourdieu a dévoilé les mécanismes subtils de la domination sociale et culturelle.</p>
-          <a href="/auteurs/pierre-bourdieu" class="read-more">Approfondir ses concepts</a>
+          <p class="author-brief">Le décodeur des mécanismes subtils de la domination sociale et culturelle.</p>
+          <a href="/auteurs/pierre-bourdieu" class="read-more">Approfondir</a>
         </div>
       </div>
       <div class="author-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Karl_Marx_001.jpg" alt="Portrait de Karl Marx" class="author-image">
+        <div class="author-image-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Karl_Marx_001.jpg" alt="Portrait de Karl Marx" class="author-image">
+        </div>
         <div class="author-info">
           <h2 class="author-name">Karl Marx</h2>
-          <p class="author-brief">Penseur révolutionnaire, Marx a développé une analyse critique de la société capitaliste qui continue d'influencer la sociologie moderne.</p>
-          <a href="/auteurs/karl-marx" class="read-more">Étudier sa théorie</a>
+          <p class="author-brief">Le penseur révolutionnaire dont l'analyse critique du capitalisme continue d'influencer la sociologie.</p>
+          <a href="/auteurs/karl-marx" class="read-more">Étudier</a>
         </div>
       </div>
       <div class="author-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Erving_Goffman.jpg" alt="Portrait d'Erving Goffman" class="author-image">
+        <div class="author-image-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Erving_Goffman.jpg" alt="Portrait d'Erving Goffman" class="author-image">
+        </div>
         <div class="author-info">
           <h2 class="author-name">Erving Goffman</h2>
-          <p class="author-brief">Sociologue canadien, Goffman a décodé les rituels de l'interaction sociale et la mise en scène de la vie quotidienne.</p>
-          <a href="/auteurs/erving-goffman" class="read-more">Décrypter ses analyses</a>
+          <p class="author-brief">Le metteur en scène de la vie quotidienne qui a décodé les rituels de l'interaction sociale.</p>
+          <a href="/auteurs/erving-goffman" class="read-more">Décrypter</a>
         </div>
       </div>
       <div class="author-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Crozier_Michel.jpg" alt="Portrait de Michel Crozier" class="author-image">
+        <div class="author-image-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Crozier_Michel.jpg" alt="Portrait de Michel Crozier" class="author-image">
+        </div>
         <div class="author-info">
           <h2 class="author-name">Michel Crozier</h2>
-          <p class="author-brief">Sociologue français, Crozier a révolutionné l'analyse des organisations et des systèmes bureaucratiques.</p>
-          <a href="/auteurs/michel-crozier" class="read-more">Comprendre sa vision</a>
+          <p class="author-brief">L'analyste des organisations qui a révolutionné notre compréhension des systèmes bureaucratiques.</p>
+          <a href="/auteurs/michel-crozier" class="read-more">Comprendre</a>
         </div>
       </div>
       <div class="author-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Gary_Becker_2004.jpg" alt="Portrait de Gary Becker" class="author-image">
+        <div class="author-image-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Gary_Becker_2004.jpg" alt="Portrait de Gary Becker" class="author-image">
+        </div>
         <div class="author-info">
           <h2 class="author-name">Gary Becker</h2>
-          <p class="author-brief">Économiste et sociologue américain, Becker a appliqué l'analyse économique aux comportements sociaux.</p>
-          <a href="/auteurs/gary-becker" class="read-more">Examiner ses théories</a>
+          <p class="author-brief">L'économiste qui a appliqué l'analyse économique aux comportements sociaux de manière innovante.</p>
+          <a href="/auteurs/gary-becker" class="read-more">Examiner</a>
         </div>
       </div>
       <div class="author-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/George_Herbert_Mead.jpg" alt="Portrait de George Herbert Mead" class="author-image">
-        <div class="author-info">
-          <h2 class="author-name">George Herbert Mead</h2>
-          <p class="author-brief">Philosophe et sociologue américain, Mead a développé la théorie de l'interactionnisme symbolique.</p>
-          <a href="/auteurs/george-herbert-mead" class="read-more">Découvrir son approche</a>
+        <div class="author-image-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Howard_Becker_%282011%29.jpg/800px-Howard_Becker_%282011%29.jpg" alt="Portrait de Howard Becker" class="author-image">
         </div>
-      </div>
-      <div class="author-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Howard_Becker_%282011%29.jpg/800px-Howard_Becker_%282011%29.jpg" alt="Portrait de Howard Becker" class="author-image">
         <div class="author-info">
           <h2 class="author-name">Howard Becker</h2>
-          <p class="author-brief">Sociologue américain, Becker est connu pour ses travaux sur la déviance, l'art et la méthodologie en sciences sociales.</p>
-          <a href="/auteurs/howard-becker" class="read-more">Explorer ses contributions</a>
+          <p class="author-brief">Le sociologue de la déviance et de l'art qui a révolutionné la méthodologie en sciences sociales.</p>
+          <a href="/auteurs/howard-becker" class="read-more">Explorer</a>
         </div>
       </div>
     </div>
